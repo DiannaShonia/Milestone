@@ -1,0 +1,19 @@
+{
+  "footer-form-title": "Leave your contact information",
+  "user-name": "How should we address you?",
+  "user-email": "Your email",
+  "user-phone-number": "Mobile number",
+  "user-comment": "Do you have any comments?",
+  "send": "Send",
+  "success-message": "Thank you for your interest in our project. We'll be in touch soon!",
+  "error-message": "The contact form could not be sent!",
+  "footer-map-sub-title": "Urban rhythm at a perfect distance",
+  "footer-map-title": "18 MIN From city center",
+  "footer-map-button-title": "Exact address",
+  "footer-contact": "Contact us",
+  "footer-address": "Address",
+  "footer-follow": "Follow for more updates",
+  "required": "Required",
+  "invalid-email": "Invalid email address",
+  "invalid-phone-number": "Please enter a valid phone number"
+}

@@ -1,0 +1,22 @@
+.appShell {
+  position: relative;
+  min-height: 100vh;
+  overflow: hidden;
+  background: #fff;
+}
+
+.appMain {
+  min-height: 100vh;
+  background-color: rgb(213, 205, 205);
+}
+
+.overlay {
+  z-index: 60;
+  background: #fff;
+  transform-origin: var(--transform-origin);
+  transform: scaleX(0);
+  pointer-events: none;
+  backface-visibility: hidden;
+  position: fixed;
+  inset: 0;
+}

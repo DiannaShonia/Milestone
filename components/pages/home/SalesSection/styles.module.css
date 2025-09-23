@@ -1,0 +1,184 @@
+.wrapper {
+  position: relative;
+  margin-top: 550px;
+}
+
+.bgBox {
+  position: absolute;
+  top: -52%;
+  left: 0;
+  right: 0;
+  bottom: -20%;
+  pointer-events: none;
+}
+
+.bgImage {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.imgBox {
+  position: relative;
+}
+
+.img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.mainTitle {
+  position: absolute;
+  bottom: 26px;
+  font-size: 64px;
+  color: #fff;
+  line-height: 1.2;
+}
+
+.infoBox {
+  position: relative;
+  margin-top: 34px;
+}
+
+.title {
+  font-size: 32px;
+  color: #354b49;
+  line-height: 1.2;
+}
+
+.text {
+  color: #556c6b;
+  font-size: 20px;
+  line-height: 1.5;
+  margin-top: 16px;
+}
+
+@media (max-width: 1679.98px) {
+  .wrapper {
+    margin-top: 500px;
+  }
+
+  .mainTitle {
+    bottom: 22px;
+    font-size: 52px;
+  }
+
+  .infoBox {
+    margin-top: 30px;
+  }
+
+  .title {
+    font-size: 28px;
+  }
+
+  .text {
+    font-size: 18px;
+    margin-top: 14px;
+  }
+}
+
+@media (max-width: 1439.98px) {
+  .wrapper {
+    margin-top: 400px;
+  }
+
+  .mainTitle {
+    bottom: 20px;
+    font-size: 44px;
+  }
+
+  .infoBox {
+    margin-top: 26px;
+  }
+
+  .title {
+    font-size: 24px;
+  }
+
+  .text {
+    font-size: 16px;
+    margin-top: 12px;
+  }
+}
+
+@media (max-width: 1279.98px) {
+  .wrapper {
+    margin-top: 360px;
+  }
+
+  .mainTitle {
+    bottom: 18px;
+    font-size: 36px;
+  }
+
+  .infoBox {
+    margin-top: 24px;
+  }
+
+  .title {
+    font-size: 20px;
+  }
+
+  .text {
+    font-size: 14px;
+    margin-top: 10px;
+  }
+}
+
+@media (max-width: 1023.98px) {
+  .wrapper {
+    margin-top: 200px;
+  }
+
+  .mainTitle {
+    bottom: 16px;
+    font-size: 32px;
+  }
+
+  .infoBox {
+    margin-top: 22px;
+  }
+
+  .title {
+    font-size: 18px;
+  }
+
+  .text {
+    font-size: 14px;
+    margin-top: 10px;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .mainTitle {
+    bottom: 16px;
+    font-size: 24px;
+    max-width: 340px;
+  }
+
+  .infoBox {
+    margin-top: 20px;
+  }
+
+  .title {
+    font-size: 16px;
+  }
+
+  .text {
+    margin-top: 8px;
+  }
+
+  .imgBox {
+    overflow: hidden;
+  }
+
+  .img {
+    margin-left: -80px;
+    margin-right: -80px;
+    max-width: inherit !important;
+    width: calc(100% + 160px);
+  }
+}

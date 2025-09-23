@@ -1,0 +1,273 @@
+.wrapper {
+  position: relative;
+  margin-top: 280px;
+  padding: 0 20px;
+}
+
+.row {
+  display: flex;
+  flex-wrap: nowrap;
+  max-width: 1660px;
+  margin: 0 auto;
+  gap: 18px;
+}
+
+.row .col {
+  position: relative;
+  width: 100%;
+}
+
+.row .col:first-child {
+  flex: 0 0 64.096384%;
+  max-width: 64.096384%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 32px;
+}
+
+.row .col:first-child .textWrapper {
+  position: relative;
+}
+
+.row .col:first-child .textWrapper:before {
+  content: "";
+  display: block;
+  position: relative;
+  padding-bottom: 79.324%;
+}
+
+.row .col:first-child .textWrapperPattern {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: left top;
+}
+
+.textBox {
+  position: absolute;
+  bottom: 43%;
+  left: 9.211%;
+  width: 80%;
+  z-index: 1;
+}
+
+.textBoxTitle {
+  font-size: 32px;
+  line-height: 1.2;
+  color: #354b49;
+  max-width: 90%;
+}
+
+.textBoxText {
+  font-size: 20px;
+  line-height: 1.5;
+  color: #556c6b;
+  margin-top: 25px;
+}
+
+.textWrapperImages {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  pointer-events: none;
+}
+
+.textWrapperImgBox {
+  position: absolute;
+  pointer-events: auto;
+}
+
+.textWrapperImgBox:first-child {
+  left: 9.211%;
+  top: 66%;
+  width: 26.974%;
+  z-index: 1;
+}
+
+.textWrapperImgBox:first-child:before {
+  content: "";
+  display: block;
+  position: relative;
+  padding-bottom: 252.614%;
+}
+
+.textWrapperImgBox:first-child .img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.textWrapperImgBox:last-child {
+  left: 38%;
+  top: 66%;
+  width: 81%;
+  z-index: 1;
+}
+
+.textWrapperImgBox:last-child:before {
+  content: "";
+  display: block;
+  position: relative;
+  padding-bottom: 35.231%;
+}
+
+.textWrapperImgBox:last-child .img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.row .col:first-child .imgBox {
+  position: relative;
+}
+
+.row .col:first-child .imgBox:before {
+  content: "";
+  display: block;
+  position: relative;
+  padding-bottom: 28.478%;
+}
+
+.row .col:first-child .imgBox .img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.row .col:last-child {
+  flex: 0 0 34.819276%;
+  max-width: 34.819276%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.row .col:last-child .imgBox:first-child {
+  position: relative;
+}
+
+.row .col:last-child .imgBox:first-child:before {
+  content: "";
+  display: block;
+  position: relative;
+  padding-bottom: 58.652%;
+}
+
+.row .col:last-child .imgBox:first-child .img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.row .col:last-child .imgBox:last-child {
+  position: relative;
+}
+
+.row .col:last-child .imgBox:last-child:before {
+  content: "";
+  display: block;
+  position: relative;
+  padding-bottom: 142.217%;
+}
+
+.row .col:last-child .imgBox:last-child .img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.image {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+@media (max-width: 1679.98px) {
+  .wrapper {
+    padding: 0 24px 0 20px;
+    margin-top: 220px;
+  }
+
+  .textBoxTitle {
+    font-size: 28px;
+    max-width: 80%;
+  }
+
+  .textBoxText {
+    font-size: 18px;
+    margin-top: 22px;
+  }
+}
+
+@media (max-width: 1439.98px) {
+  .wrapper {
+    padding: 0 26px 0 20px;
+    margin-top: 160px;
+  }
+
+  .textBoxTitle {
+    font-size: 26px;
+  }
+
+  .textBoxText {
+    font-size: 16px;
+    margin-top: 20px;
+  }
+}
+
+@media (max-width: 1279.98px) {
+  .wrapper {
+    padding: 0 28px 0 20px;
+    margin-top: 120px;
+  }
+
+  .textBoxTitle {
+    font-size: 22px;
+    max-width: 90%;
+  }
+
+  .textBoxText {
+    font-size: 14px;
+    margin-top: 16px;
+  }
+}
+
+@media (max-width: 1023.98px) {
+}
+
+@media (max-width: 767.98px) {
+}

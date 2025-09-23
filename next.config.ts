@@ -1,7 +1,8 @@
-import type { NextConfig } from "next";
+const { i18n } = require("./next-i18next.config.js");
+const withVideos = require("next-videos");
 
-const nextConfig: NextConfig = {
-  /* config options here */
-};
-
-export default nextConfig;
+module.exports = withVideos({
+  i18n,
+  reactStrictMode: true,
+  images: { domains: ["techzy.app"] },
+});

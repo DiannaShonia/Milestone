@@ -1,0 +1,23 @@
+:root {
+  /* General */
+  --fullHeight: 100svh;
+  --fullWidth: 100vw;
+
+  /* Colors RGB */
+  --color-white-rgb: 255, 255, 255;
+  --color-black-rgb: 0, 0, 0;
+
+  /* Colors */
+  --color-white: rgba(var(--color-white-rgb), 1);
+  --color-black: rgba(var(--color-black-rgb), 1);
+}
+
+html:lang(ka):root {
+  --font-title: "Noto Sans Georgian", sans-serif;
+  --font-body: "Noto Sans Georgian", sans-serif;
+}
+
+html:lang(en):root {
+  --font-title: "IBM Plex Sans", sans-serif;
+  --font-body: "IBM Plex Sans", sans-serif;
+}

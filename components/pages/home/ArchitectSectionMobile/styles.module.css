@@ -1,0 +1,164 @@
+.wrapper {
+  margin: 100px 0 0 0;
+}
+
+.slider {
+  position: relative;
+}
+
+.sliderContainer {
+  position: sticky;
+  top: 0;
+  display: flex;
+  overflow: hidden;
+}
+
+.sliderContent {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.sliderWrapper {
+  position: relative;
+  padding: 50px 0;
+  height: 100svh;
+  display: flex;
+  align-items: center;
+}
+
+.slides {
+  position: relative;
+  display: flex;
+  width: max-content;
+  min-width: 100vw;
+}
+
+.slide {
+  position: relative;
+  height: 546px;
+  background-color: #fff;
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 12px;
+}
+
+.spaceSlide {
+  position: relative;
+  width: 40px;
+}
+
+.spaceSlide:first-child {
+  width: 546px;
+}
+
+.pattern {
+  position: absolute;
+  width: 474px;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 40px;
+  z-index: -1;
+}
+
+.patternImg {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.textBox {
+  position: absolute;
+  top: 16%;
+  left: 10%;
+  width: 56%;
+}
+
+.textBoxTitle {
+  font-size: 16px;
+  line-height: 1.5;
+  color: #354b49;
+}
+
+.textBoxText {
+  font-size: 14px;
+  line-height: 1.5;
+  color: #556c6b;
+  margin-top: 25px;
+}
+
+.absoluteImg {
+  position: absolute;
+  height: 448px;
+  left: -148px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.largeImage {
+  height: 100%;
+}
+
+.horizontalImages {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.horizontalImage {
+  height: calc(46.95% - 6px);
+}
+
+.image {
+  display: block;
+  width: auto;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.smallImages {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 12px;
+  height: calc(53.05% - 6px);
+}
+
+.smallImage {
+  flex: 1;
+  height: 100%;
+  position: relative;
+}
+
+@media (max-width: 767.98px) {
+  .spaceSlide {
+    width: 24px;
+  }
+
+  .pattern {
+    width: 430px;
+    left: 24px;
+  }
+
+  .absoluteImg {
+    height: 400px;
+    left: -158px;
+  }
+
+  .slide {
+    height: 480px;
+  }
+
+  .spaceSlide:first-child {
+    width: 490px;
+  }
+
+  .textBox {
+    top: 14%;
+  }
+
+  .textBoxText {
+    margin-top: 18px;
+  }
+}
