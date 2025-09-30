@@ -10,22 +10,30 @@ type ViewProps = {
 const View = ({ data }: ViewProps) => {
   return (
     <div style={{ position: "relative", margin: "200px 100px" }}>
+      <h1>About Project</h1>
       <Link href="/">Go to home page</Link>
-      <Link href="/test" className={styles.testLink}>
+      <Link
+        href="/test"
+        style={{ marginLeft: "10px" }}
+        className={styles.testLink}
+      >
         Go to test page
       </Link>
       <div
-        style={{ height: 200, backgroundColor: "#000", margin: "20px 0" }}
-      ></div>
-
-      <div
-        style={{ height: 200, backgroundColor: "#000", margin: "20px 0" }}
-      ></div>
-      <div
-        style={{ height: 200, backgroundColor: "#000", margin: "20px 0" }}
+        style={{
+          height: 200,
+          width: "92%",
+          backgroundColor: "#000",
+          margin: "20px 0",
+        }}
       ></div>
       <div
-        style={{ height: 200, backgroundColor: "#000", margin: "20px 0" }}
+        style={{
+          height: 200,
+          width: "92%",
+          backgroundColor: "#000",
+          margin: "20px 0",
+        }}
       ></div>
     </div>
   );

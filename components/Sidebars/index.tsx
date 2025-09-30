@@ -13,7 +13,7 @@ const leftItemVariants: Variants = {
   },
   active: {
     left: "auto",
-    right: 86,
+    right: 76,
     transition: { duration: 1, ease: [0.7, 0, 0.3, 1] },
   },
 };
@@ -25,13 +25,13 @@ const rightItemVariants: Variants = {
     transition: { duration: 1, ease: [0.7, 0, 0.3, 1] },
   },
   active: {
-    left: 86,
+    left: 76,
     right: "auto",
     transition: { duration: 1, ease: [0.7, 0, 0.3, 1] },
   },
 };
 
-const Header = () => {
+const Sidebars = () => {
   const router = useRouter();
 
   const [navTarget, setNavTarget] = useState<string | null>(null);
@@ -55,7 +55,7 @@ const Header = () => {
     initial: { width: "100vw" },
     animate: {
       width: "0",
-      transition: { duration: 1.2, delay: 0.2, ease: [0.7, 0, 0.3, 1] },
+      transition: { duration: 1.5, delay: 0.2, ease: [0.7, 0, 0.3, 1] },
     },
   };
 
@@ -80,7 +80,7 @@ const Header = () => {
               router.pathname === "/select-land" || router.pathname === "/test",
           })}
         >
-          <span className={styles.menuItemLabel}>Select land</span>
+          <span className={styles.menuItemLabel}>პროექტის შესახებ</span>
           {(navTarget === "/select-land" ||
             (router.pathname === "/select-land" && navTarget === null)) && (
             <motion.div
@@ -95,9 +95,8 @@ const Header = () => {
                 right: 0,
                 width: "100vw",
                 height: "100vh",
-                backgroundColor: "#d0ff00",
+                backgroundColor: "#B23F2A",
                 zIndex: -1,
-                borderRight: "1px solid #d0ff00",
                 pointerEvents: "none",
               }}
             />
@@ -117,7 +116,7 @@ const Header = () => {
             [styles.active]: router.pathname === "/about-project",
           })}
         >
-          <span className={styles.menuItemLabel}>About project</span>
+          <span className={styles.menuItemLabel}>შეარჩიე მიწის ნაკვეთი</span>
           {(navTarget === "/about-project" ||
             (router.pathname === "/about-project" && navTarget === null)) && (
             <motion.div
@@ -132,9 +131,8 @@ const Header = () => {
                 left: 0,
                 width: "100vw",
                 height: "100vh",
-                backgroundColor: "#013330",
+                backgroundColor: "#6F756F",
                 zIndex: -1,
-                borderRight: "1px solid #013330",
                 pointerEvents: "none",
               }}
             />
@@ -145,4 +143,4 @@ const Header = () => {
   );
 };
 
-export default Header;
+export default Sidebars;

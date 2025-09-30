@@ -83,7 +83,7 @@
   bottom: 30px;
   left: 12px;
   height: 56px;
-  background-color: #556c6b;
+  background-color: #6f756f;
   padding: 0 16px 0 20px;
   gap: 17px;
   font-size: 14px;
@@ -423,6 +423,10 @@
   .dot {
     width: 24px;
     height: 24px;
+  }
+
+  .bottom {
+    padding-bottom: 170px !important;
   }
 }
 

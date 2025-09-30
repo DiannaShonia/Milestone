@@ -25,16 +25,24 @@ const CollaborationsSection = ({ data }: CollaborationsSectionProps) => {
       <div className={styles.row}>
         <div className={styles.textBox}>
           <h2 className={styles.textBoxTitle}>
-            {t("home:collaborations-section-title")}
+            {/* {t("home:collaborations-section-title")} */}
+            კოლაბორაციები არქიტექტურულ სტუდიებთან
           </h2>
           <p className={styles.textBoxText}>
-            <Trans i18nKey="home:collaborations-section-text">
+            {/* <Trans i18nKey="home:collaborations-section-text">
               <br />
-            </Trans>
+            </Trans> */}
+            გაეცანი სპეციალურად პროექტ:წავკისისთვის შექმნილ ინდივიდუალურ სახლის
+            პროექტებსა და მათ ავტორებს. <br /> კოლაბორაციის შედეგად, სხვადასხვა
+            სპექტრის და მიმართულებების მქონე წამყვანმა სტუდიებმა შემქნეს
+            ინდივიდუალური კონცეპციები. შენობების გემოეტრია მიღებულია ჩვენი
+            დიზაინკოდისა და ლანდშაფტური არქიტექტურის პრინციპების
+            გათვალისწინებით.
           </p>
           {!isTablet ? (
             <button className={styles.sendBtn}>
-              {t("home:collaborations-section-button")}
+              {/* {t("home:collaborations-section-button")} */}
+              გაიგე მეტი
               <Image
                 className={styles.sendIcon}
                 src={sendIconSrc}
@@ -48,7 +56,8 @@ const CollaborationsSection = ({ data }: CollaborationsSectionProps) => {
         <SliderCard />
         {isTablet ? (
           <button className={styles.sendBtn}>
-            {t("home:collaborations-section-button")}
+            {/* {t("home:collaborations-section-button")} */}
+            გაიგე მეტი
             <Image
               className={styles.sendIcon}
               src={sendIconSrc}

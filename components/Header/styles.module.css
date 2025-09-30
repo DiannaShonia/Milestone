@@ -17,7 +17,18 @@
 .wrapper {
   margin-right: auto;
   margin-left: auto;
-  padding: 0 146px;
+  transition: padding 0.5 ease 1.5s;
+  padding-left: 146px;
+  padding-right: 146px;
+}
+
+.about {
+  padding-left: 246px;
+}
+
+.select {
+  /* padding-left: 146px; */
+  padding-right: 246px;
 }
 
 .logoBox {

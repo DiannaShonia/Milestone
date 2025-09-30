@@ -22,10 +22,14 @@ const ArchitectSection = ({ data }: ArchitectSectionProps) => {
       <div className={styles.row}>
         <div className={styles.textBox}>
           <h2 className={styles.textBoxTitle}>
-            {t("home:architect-section-title")}
+            {/* {t("home:architect-section-title")} */}
+            ᲡᲐᲙᲛᲐᲠᲘᲡᲐᲓ ᲐᲮᲚᲝᲡ ᲓᲐ ᲡᲐᲙᲛᲐᲠᲘᲡᲐᲓ ᲨᲝᲠᲡ ᲥᲐᲚᲐᲥᲘᲡᲒᲐნ
           </h2>
           <p className={styles.textBoxText}>
-            {t("home:architect-section-text")}
+            {/* {t("home:architect-section-text")} */}
+            კომპანია მაილსტოუნი წავკისის განაპირას ექსკლუზიურ პროექტს ქმნის.
+            მზიანი სამხრეთის ფერდზე მდებარე 63 ინდივიდუალური მიწის ნაკვეთი,
+            ხედებით ტყესა და  ქალაქზე.
           </p>
         </div>
 
@@ -41,13 +45,13 @@ const ArchitectSection = ({ data }: ArchitectSectionProps) => {
           </div>
         </div>
         <button className={styles.sendBtn}>
-          {t("home:architect-section-button")}
+          {t("გაიგე მეტი")}
           <Image
             className={styles.sendIcon}
             src={sendIconSrc}
             width={26}
             height={24}
-            alt={t("common:send")}
+            alt={t("")}
           />
         </button>
       </div>

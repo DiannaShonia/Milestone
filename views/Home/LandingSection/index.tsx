@@ -61,12 +61,26 @@ const LandingSection = ({ data }: LandingSectionProps) => {
         <div>
           <div className="row">
             <div className="col-6 col-md-12">
-              <h1 className={styles.title}>{t("home:landing-title")}</h1>
+              <h1 className={styles.title}>
+                {/* {t("home:landing-title")  */}
+                ᲡᲐᲙᲛᲐᲠᲘᲡᲐᲓ ᲐᲮᲚᲝᲡ ᲓᲐ ᲡᲐᲙᲛᲐᲠᲘᲡᲐᲓ ᲨᲝᲠᲡ ᲥᲐᲚᲐᲥᲘᲡᲒᲐნ
+              </h1>
             </div>
             <div className="col-6 col-md-12">
-              <p className={styles.text}>{t("home:landing-text-1")}</p>
+              <p className={styles.text}>
+                {/* {t("home:landing-text-1")} */}კომპანია მაილსტოუნი წავკისის
+                განაპირას ექსკლუზიურ პროექტს ქმნის. მზიანი სამხრეთის ფერდზე
+                მდებარე 63 ინდივიდუალური მიწის ნაკვეთი, ხედებით ტყესა და 
+                ქალაქზე.
+              </p>
               <br />
-              <p className={styles.text}>{t("home:landing-text-2")}</p>
+              <p className={styles.text}>
+                {/* {t("home:landing-text-2")} */}
+                პროექტი : წავკისი უნიკალურ გარემოში მდებარე, ერთიანი
+                არქიტექტურული იერსახის მქონე დასახლებაა, რომელიც შექმნილია
+                მათთვის, ვისაც სურს აიშენოს ოცნების სახლი ბუნებასთან ახლოს და
+                ამავდროულად არ დაკარგოს კავშირი ქალაქთან.
+              </p>
             </div>
           </div>
         </div>

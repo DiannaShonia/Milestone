@@ -60,10 +60,10 @@ const Footer = () => {
                 </div>
                 <div className={styles.mapTop}>
                   <div className={styles.mapTopLabel}>
-                    {t("common:footer-map-sub-title")}
+                    {t("ქალაქური რიტმი იდეალურ მანძილზე")}
                   </div>
                   <h4 className={styles.mapTopTitle}>
-                    {t("common:footer-map-title")}
+                    {t("18 წუთი ქალაქის ცენტრიდან")}
                   </h4>
                 </div>
                 <Link
@@ -78,7 +78,7 @@ const Footer = () => {
                     height={24}
                     className={styles.mapBottomBtnIcon}
                   />
-                  {t("common:footer-map-button-title")}
+                  {t("ზუსტი მისამართი")}
                 </Link>
               </div>
               <div className="col-5 col-lg-12">
@@ -93,9 +93,7 @@ const Footer = () => {
           <div className="row">
             <div className="col-4 col-md-12 d-flex justify-content-start align-items-center justify-content-md-center">
               <div className={styles.bottomItem}>
-                <h5 className={styles.bottomItemTitle}>
-                  {t("common:footer-contact")}
-                </h5>
+                <h5 className={styles.bottomItemTitle}>{t("კონტაქტი")}</h5>
                 <div>
                   <a href="tel:+995598399899" className={styles.bottomItemText}>
                     +995 598 399 899
@@ -117,7 +115,7 @@ const Footer = () => {
                   className={styles.bottomItemTitle}
                   style={{ textAlign: "center" }}
                 >
-                  {t("common:footer-address")}
+                  {t("მისამართი")}
                 </h5>
                 <div>
                   <div
@@ -131,9 +129,7 @@ const Footer = () => {
             </div>
             <div className="col-4 col-md-12 d-flex justify-content-end align-items-center justify-content-md-center">
               <div className={styles.bottomItem}>
-                <h5 className={styles.bottomItemTitle}>
-                  {t("common:footer-follow")}
-                </h5>
+                <h5 className={styles.bottomItemTitle}>{t("გამოგვყევი")}</h5>
                 <div className={styles.socials}>
                   <Link
                     href="https://www.facebook.com/share/1LFquLb5Fu/?mibextid=wwXIfr"

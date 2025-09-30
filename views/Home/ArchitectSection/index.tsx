@@ -22,14 +22,21 @@ const ArchitectSection = ({ data }: ArchitectSectionProps) => {
       <div className={styles.row}>
         <div className={styles.textBox}>
           <h2 className={styles.textBoxTitle}>
-            {t("home:architect-section-title")}
+            {/* {t("home:architect-section-title")} */}
+            ᲚᲐᲜᲓᲨᲐᲤᲢᲖᲔ ᲝᲠᲘᲔᲜᲢᲘᲠᲔᲑᲣᲚᲘ ᲐᲠᲥᲘᲢᲔᲥᲢᲣᲠᲐ
           </h2>
           <p className={styles.textBoxText}>
-            {t("home:architect-section-text")}
+            {/* {t("home:architect-section-text")} */}
+            პროექტი : წავკისის არქიტექტურული ხედვა ლანდშაფტზე ორიენტირების იდეას
+            ეფუძნება. უნიკალური საცხოვრებელი გარემოს შესაქმნელად, შევიმუშავეთ
+            არქიტექტურული სახელმძღვანელო პრინციპების ერთობლიობა - დიზაინ კოდი.
+            რომელშიც თითოეული ელემენტი ითვალისწინებს მომდევნოს და ეხმარება
+            მობინადრეს შექმნას ქალაქგარეთ ცხოვრების გამორჩეული გამოცდილება.
           </p>
           <Link href={"./select-land"}>
             <button className={styles.sendBtn}>
-              {t("home:architect-section-button")}
+              {/* {t("home:architect-section-button")} */}
+              გაიგე მეტი
               <Image
                 className={styles.sendIcon}
                 src={sendIconSrc}

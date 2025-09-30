@@ -15,7 +15,7 @@ import "@/assets/styles/fonts.css";
 import "@/assets/styles/swiper.css";
 
 function App({ Component, pageProps, router }: AppProps) {
-  // const isTablet = useMediaQuery("(max-width: 1023.98px)");
+  const isTablet = useMediaQuery("(max-width: 1023.98px)");
 
   return (
     <>
@@ -28,7 +28,7 @@ function App({ Component, pageProps, router }: AppProps) {
       <div className="page-wrap">
         <div>
           <Header />
-          <Sidebars />
+          {!isTablet ? <Sidebars /> : null}
           <main>
             <AnimatePresence mode="wait">
               <Component {...pageProps} key={router.asPath} />

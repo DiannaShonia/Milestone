@@ -10,16 +10,22 @@ import Link from "next/link";
 
 const Header = () => {
   const router = useRouter();
+  const { pathname, asPath, query } = router;
 
   const handleChangeLanguage = (locale: string) => {
-    const { pathname, asPath, query } = router;
     router.push({ pathname, query }, asPath, { locale: locale });
   };
 
   return (
     <>
       <header className={styles.header}>
-        <div className={styles.wrapper}>
+        <div
+          className={clsx(
+            styles.wrapper,
+            pathname === "/about-project" ? styles.about : "",
+            pathname === "/select-land" ? styles.select : ""
+          )}
+        >
           <div className={styles.row}>
             <div>
               <div className={styles.logoBox}>

@@ -16,7 +16,11 @@ const PageLayout = ({ children }: IPageLayout) => {
       }}
       animate={{
         opacity: 1,
-        transition: { duration: 1, delay: 0, ease: "easeOut" },
+        transition: { duration: 0, delay: 0, ease: "easeOut" },
+      }}
+      exit={{
+        opacity: 0,
+        transition: { duration: 0.3, delay: 0.4, ease: "easeOut" },
       }}
     >
       {children}

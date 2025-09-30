@@ -80,7 +80,10 @@ const ContactForm = () => {
 
   return (
     <>
-      <h3 className={styles.headlineTitle}>{t("common:footer-form-title")}</h3>
+      <h3 className={styles.headlineTitle}>
+        {/* {t("common:footer-form-title") */}
+        დაგვიტოვე საკონტაქტო
+      </h3>
       <div className={styles.formBox}>
         <form className={styles.form} onSubmit={formik.handleSubmit}>
           <div className={styles.left}>
@@ -90,7 +93,7 @@ const ContactForm = () => {
               </div>
               <FormControl fullWidth>
                 <TextField
-                  label={t("common:user-name")}
+                  label="როგორ მოგმართოთ?"
                   name="name"
                   variant="standard"
                   value={formik.values.name}
@@ -106,7 +109,7 @@ const ContactForm = () => {
             <div className={styles.inputField}>
               <FormControl fullWidth>
                 <TextField
-                  label={t("common:user-email")}
+                  label={t("თქვენი მეილი")}
                   name="email"
                   variant="standard"
                   value={formik.values.email}
@@ -121,7 +124,7 @@ const ContactForm = () => {
             <div className={styles.inputField}>
               <FormControl fullWidth>
                 <TextField
-                  label={t("common:user-phone-number")}
+                  label={"მობილურის ნომერი"}
                   name="phoneNumber"
                   variant="standard"
                   value={formik.values.phoneNumber}
@@ -141,7 +144,7 @@ const ContactForm = () => {
             <div className={styles.inputField}>
               <FormControl fullWidth>
                 <TextField
-                  label={t("common:user-comment")}
+                  label={t("გაქვთ რაიმე კომენტარი?")}
                   name="comment"
                   variant="standard"
                   value={formik.values.comment}
@@ -168,9 +171,9 @@ const ContactForm = () => {
                 src={sendIconSrc}
                 width={26}
                 height={24}
-                alt={t("common:send")}
+                alt={t("გაგზავნა")}
               />
-              {t("common:send")}
+              {t("გაგზავნა")}
             </button>
           </div>
         </form>

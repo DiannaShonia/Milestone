@@ -28,16 +28,26 @@ const SalesSection = ({ data }: SalesSectionProps) => {
         />
         <div className={styles.titleWrapper}>
           <h2 className={styles.mainTitle}>
-            {t("home:sales-section-main-title")}
+            {/* {t("home:sales-section-main-title")} */}
+            წინასწარი გაყიდვები დაიწყო
           </h2>
         </div>
       </div>
       <div className={styles.infoBox}>
-        <h3 className={styles.title}>{t("home:sales-section-title")}</h3>
+        <h3 className={styles.title}>
+          {/* {t("home:sales-section-title")} */}
+          ტყეში ჩაფლული მიწის ნაკვეთები
+        </h3>
         <div className={styles.textContainer}>
-          <p className={styles.text}>{t("home:sales-section-text")}</p>
+          <p className={styles.text}>
+            {/* {t("home:sales-section-text")} */}
+            შეარჩიეთ ადგილმდებარეობა, რომელიც საუკეთესოდ შეესაბამება თქვენი
+            ცხოვრების წესს: ტყის პირას მდებარე ველი, თუ შემაღლებულ ფერდზე
+            განლაგებული ნაკვეთები პანორამული ხედით ქალაქზე.
+          </p>
           <button className={styles.sendBtn}>
-            {t("home:sales-button-title")}
+            {/* {t("home:sales-button-title")} */}
+            შეარჩიე მიწის ნაკვეთი
             <Image
               className={styles.sendIcon}
               src={sendIconSrc}

@@ -8,6 +8,7 @@ type ViewProps = {
 const View = ({ data }: ViewProps) => {
   return (
     <div style={{ position: "relative", margin: "200px 200px" }}>
+      <h1>Select Land</h1>
       <Link href="/">Go to home page</Link>
       <div
         style={{ height: 200, backgroundColor: "#000", margin: "20px 0" }}
@@ -15,13 +16,7 @@ const View = ({ data }: ViewProps) => {
       <div
         style={{ height: 200, backgroundColor: "#000", margin: "20px 0" }}
       ></div>
-      About Project Page ...
-      <div
-        style={{ height: 200, backgroundColor: "#000", margin: "20px 0" }}
-      ></div>
-      <div
-        style={{ height: 200, backgroundColor: "#000", margin: "20px 0" }}
-      ></div>
+      Select Land Page ...
     </div>
   );
 };
