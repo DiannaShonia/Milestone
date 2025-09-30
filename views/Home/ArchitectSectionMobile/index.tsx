@@ -23,7 +23,7 @@ const ArchitectSection = ({ data }: ArchitectSectionProps) => {
         <div className={styles.textBox}>
           <h2 className={styles.textBoxTitle}>
             {/* {t("home:architect-section-title")} */}
-            ᲡᲐᲙᲛᲐᲠᲘᲡᲐᲓ ᲐᲮᲚᲝᲡ ᲓᲐ ᲡᲐᲙᲛᲐᲠᲘᲡᲐᲓ ᲨᲝᲠᲡ ᲥᲐᲚᲐᲥᲘᲡᲒᲐნ
+            ᲚᲐᲜᲓᲨᲐᲤᲢᲖᲔ ᲝᲠᲘᲔᲜᲢᲘᲠᲔᲑᲣᲚᲘ ᲐᲠᲥᲘᲢᲔᲥᲢᲣᲠᲐ
           </h2>
           <p className={styles.textBoxText}>
             {/* {t("home:architect-section-text")} */}

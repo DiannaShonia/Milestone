@@ -63,7 +63,8 @@ const Footer = () => {
                     {t("ქალაქური რიტმი იდეალურ მანძილზე")}
                   </div>
                   <h4 className={styles.mapTopTitle}>
-                    {t("18 წუთი ქალაქის ცენტრიდან")}
+                    {/* {t("18 წუთი ქალაქის ცენტრიდან")} */}
+                    18 ᲬᲣᲗᲘ ᲥᲐᲚᲐᲥᲘᲡ ᲪᲔᲜᲢᲠᲘᲓᲐᲜ
                   </h4>
                 </div>
                 <Link
@@ -93,7 +94,10 @@ const Footer = () => {
           <div className="row">
             <div className="col-4 col-md-12 d-flex justify-content-start align-items-center justify-content-md-center">
               <div className={styles.bottomItem}>
-                <h5 className={styles.bottomItemTitle}>{t("კონტაქტი")}</h5>
+                <h5 className={styles.bottomItemTitle}>
+                  {/* {t("კონტაქტი")}  */}
+                  ᲙᲝᲜᲢᲐᲥᲢᲘ
+                </h5>
                 <div>
                   <a href="tel:+995598399899" className={styles.bottomItemText}>
                     +995 598 399 899
@@ -115,7 +119,8 @@ const Footer = () => {
                   className={styles.bottomItemTitle}
                   style={{ textAlign: "center" }}
                 >
-                  {t("მისამართი")}
+                  {/* {t("მისამართი")} */}
+                  ᲛᲘᲡᲐᲛᲐᲠᲗᲘ
                 </h5>
                 <div>
                   <div
@@ -129,7 +134,7 @@ const Footer = () => {
             </div>
             <div className="col-4 col-md-12 d-flex justify-content-end align-items-center justify-content-md-center">
               <div className={styles.bottomItem}>
-                <h5 className={styles.bottomItemTitle}>{t("გამოგვყევი")}</h5>
+                <h5 className={styles.bottomItemTitle}>ᲒᲐᲛᲝᲒᲕᲧᲔᲕᲘ</h5>
                 <div className={styles.socials}>
                   <Link
                     href="https://www.facebook.com/share/1LFquLb5Fu/?mibextid=wwXIfr"

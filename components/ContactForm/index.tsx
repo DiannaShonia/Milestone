@@ -82,7 +82,7 @@ const ContactForm = () => {
     <>
       <h3 className={styles.headlineTitle}>
         {/* {t("common:footer-form-title") */}
-        დაგვიტოვე საკონტაქტო
+        ᲓᲐᲒᲕᲘᲢᲝᲕᲔ ᲡᲐᲙᲝᲜᲢᲐᲥᲢᲝ
       </h3>
       <div className={styles.formBox}>
         <form className={styles.form} onSubmit={formik.handleSubmit}>

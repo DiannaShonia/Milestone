@@ -29,14 +29,14 @@ const SalesSection = ({ data }: SalesSectionProps) => {
         <div className={styles.titleWrapper}>
           <h2 className={styles.mainTitle}>
             {/* {t("home:sales-section-main-title")} */}
-            წინასწარი გაყიდვები დაიწყო
+            ᲬᲘᲜᲐᲡᲬᲐᲠᲘ ᲒᲐᲧᲘᲓᲕᲔᲑᲘ ᲓᲐᲘᲬᲧᲝ
           </h2>
         </div>
       </div>
       <div className={styles.infoBox}>
         <h3 className={styles.title}>
           {/* {t("home:sales-section-title")} */}
-          ტყეში ჩაფლული მიწის ნაკვეთები
+          ᲢᲧᲔᲨᲘ ᲩᲐᲤᲚᲣᲚᲘ ᲛᲘᲬᲘᲡ ᲜᲐᲙᲕᲔᲗᲔᲑᲘ
         </h3>
         <div className={styles.textContainer}>
           <p className={styles.text}>

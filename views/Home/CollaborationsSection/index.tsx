@@ -26,7 +26,7 @@ const CollaborationsSection = ({ data }: CollaborationsSectionProps) => {
         <div className={styles.textBox}>
           <h2 className={styles.textBoxTitle}>
             {/* {t("home:collaborations-section-title")} */}
-            კოლაბორაციები არქიტექტურულ სტუდიებთან
+            ᲙᲝᲚᲐᲑᲝᲠᲐᲪᲘᲔᲑᲘ ᲐᲠᲥᲘᲢᲔᲥᲢᲣᲠᲣᲚ ᲡᲢᲣᲓᲘᲔᲑᲗᲐᲜ
           </h2>
           <p className={styles.textBoxText}>
             {/* <Trans i18nKey="home:collaborations-section-text">

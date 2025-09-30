@@ -141,8 +141,6 @@
 
 .socialsLink .socialsLink img {
   display: block;
-  max-width: 16px;
-  max-height: 16px;
   object-fit: contain;
   object-position: center;
 }
@@ -244,16 +242,6 @@
     margin-bottom: 8px;
   }
 
-  .socialsLink {
-    width: 30px;
-    height: 30px;
-  }
-
-  .socialsLink img {
-    max-width: 14px;
-    max-height: 14px;
-  }
-
   .bottom {
     padding: 50px 0 30px 0;
   }
@@ -317,16 +305,6 @@
   .bottomItemTitle {
     font-size: 16px;
     margin-bottom: 8px;
-  }
-
-  .socialsLink {
-    width: 28px;
-    height: 28px;
-  }
-
-  .socialsLink img {
-    max-width: 14px;
-    max-height: 14px;
   }
 
   .bottom {
@@ -408,12 +386,6 @@
 
   .socialsLink {
     width: 24px;
-    height: 24px;
-  }
-
-  .socialsLink img {
-    max-width: 12px;
-    max-height: 12px;
   }
 
   .dots {
