@@ -1,0 +1,67 @@
+@import "swiper/css";
+@import "swiper/css/navigation";
+@import "swiper/css/pagination";
+
+.swiper {
+  height: 100% !important;
+}
+
+.custom-prev,
+.custom-next {
+  position: absolute !important;
+  width: 32px !important;
+  height: 32px !important;
+  top: -50px !important;
+  bottom: 13px !important;
+  z-index: 2 !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  cursor: pointer !important;
+  z-index: 2 !important;
+  transition: transform 0.3s !important;
+}
+
+.custom-prev {
+  right: 66px !important;
+}
+
+.custom-next {
+  right: 20px !important;
+}
+
+.swiper-button-disabled {
+  opacity: 0.5 !important;
+  cursor: auto !important;
+}
+
+.swiper-pagination {
+  position: absolute !important;
+  bottom: -30 !important;
+  width: 100px !important;
+  transition: transform 0.3s !important;
+  z-index: 99999 !important;
+}
+
+.swiper-pagination-bullet {
+  position: relative !important;
+  width: 10px !important;
+  height: 10px !important;
+  border-radius: 100% !important;
+  background-color: #6f756f !important;
+  margin: 0 4px !important;
+  opacity: 0.3 !important;
+  z-index: 2 !important;
+  transition: opacity 0.3s !important;
+}
+
+.swiper-pagination-bullet-active {
+  opacity: 1 !important;
+  background-color: #b23f2a !important;
+}
+
+@media (max-width: 1023.98px) {
+  .swiper {
+    overflow: visible !important;
+  }
+}

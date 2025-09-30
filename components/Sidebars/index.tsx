@@ -1,84 +1,148 @@
-"use client";
-
-import Link from "next/link";
+import React, { useState, useEffect } from "react";
 import { useRouter } from "next/router";
-import { PointerEvent, useEffect, useState } from "react";
-import { motion } from "framer-motion";
 import clsx from "clsx";
+
 import styles from "./styles.module.css";
+import { motion, Variants } from "framer-motion";
 
-type Dir = "ltr" | "rtl";
-const SIDEBAR_W = 76;
+const leftItemVariants: Variants = {
+  inactive: {
+    right: "auto",
+    left: 0,
+    transition: { duration: 1, ease: [0.7, 0, 0.3, 1] },
+  },
+  active: {
+    left: "auto",
+    right: 86,
+    transition: { duration: 1, ease: [0.7, 0, 0.3, 1] },
+  },
+};
 
-export default function Sidebars({
-  onNavigate,
-}: {
-  onNavigate: (dir: Dir, href: string) => void;
-}) {
+const rightItemVariants: Variants = {
+  inactive: {
+    left: "auto",
+    right: 0,
+    transition: { duration: 1, ease: [0.7, 0, 0.3, 1] },
+  },
+  active: {
+    left: 86,
+    right: "auto",
+    transition: { duration: 1, ease: [0.7, 0, 0.3, 1] },
+  },
+};
+
+const Header = () => {
   const router = useRouter();
-  const [preMode, setPreMode] = useState<"stack-right" | "stack-left" | null>(
-    null
-  );
+
+  const [navTarget, setNavTarget] = useState<string | null>(null);
 
   useEffect(() => {
-    const done = () => setPreMode(null);
-    router.events.on("routeChangeComplete", done);
-    return () => router.events.off("routeChangeComplete", done);
-  }, [router.events]);
+    if (navTarget && router.pathname !== navTarget) {
+      setNavTarget(null);
+    }
+    if (!navTarget) {
+      // no-op, but keeps logic explicit
+    }
+  }, [router.pathname]);
 
-  const routeMode: "default" | "stack-right" | "stack-left" =
-    router.pathname === "/"
-      ? "default"
-      : router.pathname.startsWith("/project")
-      ? "stack-right"
-      : router.pathname.startsWith("/choose-land")
-      ? "stack-left"
-      : "default";
+  const handleNavigation = (path: string) => {
+    if (router.pathname === path) return;
+    setNavTarget(path);
+    router.push(path);
+  };
 
-  const mode = preMode ?? routeMode;
-
-  const leftDockToRight = `calc(100vw - ${2 * SIDEBAR_W}px)`;
-  const rightDockToLeft = `calc(-100vw + ${2 * SIDEBAR_W}px)`;
-
-  function handlePointerDown(e: PointerEvent, dir: Dir, href: string) {
-    if (e.metaKey || e.ctrlKey || e.shiftKey || e.altKey || e.button === 1)
-      return;
-    e.preventDefault();
-    setPreMode(dir === "ltr" ? "stack-right" : "stack-left");
-    onNavigate(dir, href);
-  }
+  const testVariants: Variants = {
+    initial: { width: "100vw" },
+    animate: {
+      width: "0",
+      transition: { duration: 1.2, delay: 0.2, ease: [0.7, 0, 0.3, 1] },
+    },
+  };
 
   return (
     <>
-      <motion.div
-        className={clsx(styles.sidebar, styles.sidebarLeft)}
-        initial={false}
-        animate={{ x: mode === "stack-right" ? leftDockToRight : 0 }}
-        transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
-      >
-        <Link
-          href="/project"
-          className={styles.sidebarLink}
-          onPointerDown={(e) => handlePointerDown(e, "ltr", "/project")}
+      <header className={styles.header}>
+        <motion.div
+          variants={leftItemVariants}
+          initial={false}
+          animate={
+            navTarget === "/select-land" ||
+            navTarget === "/test" ||
+            ((router.pathname === "/select-land" ||
+              router.pathname === "/test") &&
+              navTarget === null)
+              ? "active"
+              : "inactive"
+          }
+          onClick={() => handleNavigation("/select-land")}
+          className={clsx(styles.menuItem, styles.menuItemLeft, {
+            [styles.active]:
+              router.pathname === "/select-land" || router.pathname === "/test",
+          })}
         >
-          Projects
-        </Link>
-      </motion.div>
-
-      <motion.div
-        className={clsx(styles.sidebar, styles.sidebarRight)}
-        initial={false}
-        animate={{ x: mode === "stack-left" ? rightDockToLeft : 0 }}
-        transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
-      >
-        <Link
-          href="/choose-land"
-          className={styles.sidebarLink}
-          onPointerDown={(e) => handlePointerDown(e, "rtl", "/choose-land")}
+          <span className={styles.menuItemLabel}>Select land</span>
+          {(navTarget === "/select-land" ||
+            (router.pathname === "/select-land" && navTarget === null)) && (
+            <motion.div
+              key="select-land-slide"
+              variants={testVariants}
+              initial="initial"
+              animate="animate"
+              exit="exit"
+              style={{
+                position: "absolute",
+                top: 0,
+                right: 0,
+                width: "100vw",
+                height: "100vh",
+                backgroundColor: "#d0ff00",
+                zIndex: -1,
+                borderRight: "1px solid #d0ff00",
+                pointerEvents: "none",
+              }}
+            />
+          )}
+        </motion.div>
+        <motion.div
+          variants={rightItemVariants}
+          initial={false}
+          animate={
+            navTarget === "/about-project" ||
+            (router.pathname === "/about-project" && navTarget === null)
+              ? "active"
+              : "inactive"
+          }
+          onClick={() => handleNavigation("/about-project")}
+          className={clsx(styles.menuItem, styles.menuItemRight, {
+            [styles.active]: router.pathname === "/about-project",
+          })}
         >
-          Choose ur land
-        </Link>
-      </motion.div>
+          <span className={styles.menuItemLabel}>About project</span>
+          {(navTarget === "/about-project" ||
+            (router.pathname === "/about-project" && navTarget === null)) && (
+            <motion.div
+              key="about-project-slide"
+              variants={testVariants}
+              initial="initial"
+              animate="animate"
+              exit="exit"
+              style={{
+                position: "absolute",
+                top: 0,
+                left: 0,
+                width: "100vw",
+                height: "100vh",
+                backgroundColor: "#013330",
+                zIndex: -1,
+                borderRight: "1px solid #013330",
+                pointerEvents: "none",
+              }}
+            />
+          )}
+        </motion.div>
+      </header>
     </>
   );
-}
+};
+
+export default Header;

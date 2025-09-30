@@ -1,0 +1,112 @@
+.wrapper {
+  margin-top: 280px;
+  padding: 0 75px;
+}
+
+.row {
+  display: flex;
+  margin: 0 auto;
+  gap: 25px;
+}
+
+.textBox {
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+}
+
+.textBoxTitle {
+  font-size: 30px;
+  line-height: 125%;
+  color: #000;
+  font-weight: 700;
+  width: 100%;
+  letter-spacing: 0;
+}
+
+.textBoxText {
+  font-size: 20px;
+  line-height: 150%;
+  color: #000;
+  margin-top: 25px;
+  line-height: 30px;
+  max-width: 600px;
+}
+
+.imageBox {
+  display: grid;
+  width: 60%;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-areas: "img1 img1 img2" "img3 img3 img3";
+  gap: 12px;
+}
+
+.imageBox > :first-child {
+  grid-area: img1;
+}
+
+.imageBox > :nth-child(2) {
+  grid-area: img2;
+}
+
+.imageBox > :last-child {
+  grid-area: img3;
+}
+
+.image {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.sendBtn {
+  display: block;
+  height: 56px;
+  background-color: #6f756f;
+  border: 0;
+  box-shadow: none;
+  border-radius: 0;
+  color: #fff;
+  font-size: 14px;
+  padding: 0 16px;
+  display: flex;
+  align-items: center;
+  width: max-content;
+  margin-top: 40px;
+}
+
+.sendIcon {
+  display: block;
+  width: 20px;
+  margin-left: 17px;
+}
+
+@media (max-width: 1679.98px) {
+  .wrapper {
+    padding: 0 75px !important;
+  }
+
+  .textBoxText {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 1439.98px) {
+  .wrapper {
+    padding: 0 26px 0 20px;
+    margin-top: 160px;
+  }
+
+  .textBoxText {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 1279.98px) {
+  .wrapper {
+    padding: 0 28px 0 20px;
+    margin-top: 120px;
+  }
+}
