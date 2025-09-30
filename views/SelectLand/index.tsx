@@ -9,7 +9,14 @@ type ViewProps = {
 
 const View = ({ data }: ViewProps) => {
   return (
-    <div style={{ position: "relative", margin: "200px 100px" }}>
+    <div
+      style={{
+        position: "relative",
+        margin: "auto",
+        width: "70%",
+        paddingTop: "200px",
+      }}
+    >
       <h1>About Project</h1>
       <Link href="/">Go to home page</Link>
       <Link
