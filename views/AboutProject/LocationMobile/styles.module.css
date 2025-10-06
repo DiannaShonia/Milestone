@@ -1,0 +1,51 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  margin: 180px 0;
+}
+
+.image {
+  display: block;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.location {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.mainTitle {
+  font-size: 16px;
+  font-weight: normal !important;
+  padding: 6px 16px;
+  background-color: #b8b5ac;
+  color: #fff;
+  width: max-content;
+}
+
+.subtitle {
+  font-size: 12px;
+  font-weight: normal !important;
+  color: #3e5559;
+}
+
+.title {
+  max-width: 240px;
+  color: #b13e2b;
+  font-size: 24px;
+  text-align: center;
+  margin-top: 8px;
+}
+
+.textWrapper {
+  margin: 16px 0 40px 0;
+}
+
+.text {
+  font-size: 14px;
+  line-height: 1.5;
+}

@@ -6,6 +6,20 @@
   z-index: 999;
   padding: 30px 0;
   mix-blend-mode: difference;
+  max-height: 96px;
+}
+
+.filledBackground {
+  background-color: #faf8ec;
+  mix-blend-mode: normal;
+}
+
+.filledBackground .language {
+  color: #000;
+}
+
+.filledBackground .logo {
+  filter: invert(1);
 }
 
 .row {
@@ -23,11 +37,10 @@
 }
 
 .about {
-  padding-left: 246px;
+  padding-right: 196px;
 }
 
 .select {
-  /* padding-left: 146px; */
   padding-right: 246px;
 }
 

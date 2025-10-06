@@ -1,0 +1,30 @@
+.linkWrapper {
+  position: fixed;
+  display: flex;
+  bottom: 0;
+  left: 0;
+  z-index: 999999;
+  width: 100%;
+}
+
+.linkToProject {
+  height: 100px;
+  display: flex;
+  width: 50%;
+  align-items: center;
+  justify-content: center;
+  background: #b23f2a;
+  color: #fff;
+  font-size: 16px;
+}
+
+.linkToSelectLand {
+  height: 100px;
+  display: flex;
+  width: 50%;
+  align-items: center;
+  justify-content: center;
+  background: #6f756f;
+  color: #fff;
+  font-size: 16px;
+}

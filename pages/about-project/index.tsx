@@ -1,6 +1,7 @@
 import type { GetStaticProps, InferGetStaticPropsType } from "next";
 import View from "@/views/AboutProject";
 import { PageLayout, Seo } from "@/components";
+import { newsData } from "@/mockData";
 
 type Props = {
   data: any | null;
@@ -20,7 +21,7 @@ const AboutProjectPage = ({
 };
 
 export const getStaticProps: GetStaticProps<Props> = async ({ locale }) => {
-  const data: any | null = null;
+  const data: any | null = newsData;
 
   // if (!data) {
   //   return {

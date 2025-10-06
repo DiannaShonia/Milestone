@@ -18,11 +18,19 @@ const Header = () => {
 
   return (
     <>
-      <header className={styles.header}>
+      <header
+        className={clsx(
+          styles.header,
+          pathname !== "/" ? styles.filledBackground : ""
+        )}
+      >
         <div
           className={clsx(
             styles.wrapper,
-            pathname === "/about-project" ? styles.about : "",
+            pathname === "/about-project" ||
+              pathname === "/about-project/[slug]"
+              ? styles.about
+              : "",
             pathname === "/select-land" ? styles.select : ""
           )}
         >

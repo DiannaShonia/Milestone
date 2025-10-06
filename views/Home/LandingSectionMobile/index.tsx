@@ -1,6 +1,5 @@
 import React, { useEffect, useRef } from "react";
 import { useMediaQuery } from "@/hooks";
-import { useTranslation } from "next-i18next";
 import Image from "next/image";
 
 import styles from "./styles.module.css";
@@ -16,7 +15,7 @@ type LandingSectionProps = {
 };
 
 const LandingSection = ({ data }: LandingSectionProps) => {
-  const { t } = useTranslation(["common", "home"]);
+  // const { t } = useTranslation(["common", "home"]);
   const isMobile = useMediaQuery("(max-width: 767.98px)");
   const isTablet = useMediaQuery("(max-width: 1024px)");
 
@@ -89,14 +88,6 @@ const LandingSection = ({ data }: LandingSectionProps) => {
             </div>
           </div>
         </div>
-      </div>
-      <div className={styles.linkWrapper}>
-        <Link className={styles.linkToProject} href={"/about-project"}>
-          პროექტის შესახებ
-        </Link>
-        <Link className={styles.linkToSelectLand} href={"/select-land"}>
-          შეარჩიე მიწა
-        </Link>
       </div>
     </div>
   );

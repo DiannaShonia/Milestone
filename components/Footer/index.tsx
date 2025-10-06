@@ -2,7 +2,6 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/router";
-import { useTranslation } from "next-i18next";
 import clsx from "clsx";
 import ContactForm from "@/components/ContactForm";
 
@@ -17,7 +16,7 @@ import instagramIconSrc from "@/assets/images/instagram-icon.svg";
 import footerDotSrc from "@/assets/images/footer-dot.png";
 
 const Footer = () => {
-  const { t } = useTranslation(["common", "home"]);
+  // const { t } = useTranslation(["common", "home"]);
 
   const router = useRouter();
 
@@ -60,7 +59,7 @@ const Footer = () => {
                 </div>
                 <div className={styles.mapTop}>
                   <div className={styles.mapTopLabel}>
-                    {t("ქალაქური რიტმი იდეალურ მანძილზე")}
+                    {"ქალაქური რიტმი იდეალურ მანძილზე"}
                   </div>
                   <h4 className={styles.mapTopTitle}>
                     {/* {t("18 წუთი ქალაქის ცენტრიდან")} */}
@@ -74,12 +73,12 @@ const Footer = () => {
                 >
                   <Image
                     src={mapIconSrc}
-                    alt={t("common:footer-map-button-title")}
+                    alt={"common:footer-map-button-title"}
                     width={24}
                     height={24}
                     className={styles.mapBottomBtnIcon}
                   />
-                  {t("ზუსტი მისამართი")}
+                  {"ზუსტი მისამართი"}
                 </Link>
               </div>
               <div className="col-5 col-lg-12">

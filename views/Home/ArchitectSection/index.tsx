@@ -1,6 +1,5 @@
 import React from "react";
 import Image from "next/image";
-import { useTranslation } from "next-i18next";
 
 import styles from "./styles.module.css";
 
@@ -16,7 +15,7 @@ type ArchitectSectionProps = {
 };
 
 const ArchitectSection = ({ data }: ArchitectSectionProps) => {
-  const { t } = useTranslation(["common", "home"]);
+  // const { t } = useTranslation(["common", "home"]);
   return (
     <div className={styles.wrapper}>
       <div className={styles.row}>
@@ -42,7 +41,7 @@ const ArchitectSection = ({ data }: ArchitectSectionProps) => {
                 src={sendIconSrc}
                 width={26}
                 height={24}
-                alt={t("common:send")}
+                alt={"common:send"}
               />
             </button>
           </Link>

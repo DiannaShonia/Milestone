@@ -1,9 +1,9 @@
 import type { AppProps } from "next/app";
 import Head from "next/head";
-import { appWithTranslation } from "next-i18next";
-import Header from "@/components/Header";
+
 import { AnimatePresence } from "framer-motion";
 import { useMediaQuery } from "@/hooks";
+import Header from "@/components/Header";
 import Sidebars from "@/components/Sidebars";
 
 import "@/assets/styles/reset.css";
@@ -13,9 +13,11 @@ import "@/assets/styles/mui.css";
 import "@/assets/styles/styles.css";
 import "@/assets/styles/fonts.css";
 import "@/assets/styles/swiper.css";
+import SidebarsMobile from "@/components/SidebarsMobile";
 
 function App({ Component, pageProps, router }: AppProps) {
   const isTablet = useMediaQuery("(max-width: 1023.98px)");
+  const { pathname } = router;
 
   return (
     <>
@@ -27,9 +29,17 @@ function App({ Component, pageProps, router }: AppProps) {
       </Head>
       <div className="page-wrap">
         <div>
-          <Header />
-          {!isTablet ? <Sidebars /> : null}
-          <main>
+          {isTablet ? <SidebarsMobile /> : <Sidebars />}
+          <main
+            style={{
+              paddingRight:
+                !isTablet && pathname === "/about-project" ? "152px" : "",
+              paddingLeft:
+                !isTablet && pathname === "/select-land" ? "152px" : "",
+              position: "relative",
+            }}
+          >
+            <Header />
             <AnimatePresence mode="wait">
               <Component {...pageProps} key={router.asPath} />
             </AnimatePresence>
@@ -40,4 +50,4 @@ function App({ Component, pageProps, router }: AppProps) {
   );
 }
 
-export default appWithTranslation(App);
+export default App;

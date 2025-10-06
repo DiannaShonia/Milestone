@@ -1,29 +1,55 @@
-import React from "react";
-import Link from "next/link";
+import React, { useState } from "react";
+import { useMediaQuery } from "@mui/material";
+import { useMenuStore } from "@/store/useMenuStore";
+import About from "./About";
+import Location from "./Location";
+import News from "./News";
+import Environment from "./Environment";
+import Contact from "./Contact";
+import AboutMobile from "./AboutMobile";
+import LocationMobile from "./LocationMobile";
+import EnvironmentMobile from "./EnvironmentMobile";
+import Menu from "@/components/Menu";
+
+import styles from "./styles.module.css";
 
 type ViewProps = {
   data: any;
 };
 
 const View = ({ data }: ViewProps) => {
-  return (
-    <div
-      style={{
-        position: "relative",
-        margin: "auto",
-        width: "70%",
-        paddingTop: "200px",
-      }}
-    >
-      <h1>Select Land</h1>
-      <Link href="/">Go to home page</Link>
-      <div
-        style={{ height: 200, backgroundColor: "#000", margin: "20px 0" }}
-      ></div>
-      <div
-        style={{ height: 200, backgroundColor: "#000", margin: "20px 0" }}
-      ></div>
-      Select Land Page ...
+  const { activeMenuItem } = useMenuStore();
+
+  const isTablet = useMediaQuery("(max-width: 1023.98px)");
+
+  const renderMenuItems = () => {
+    switch (activeMenuItem) {
+      case "0":
+        return <About />;
+      case "1":
+        return <Location />;
+      case "2":
+        return <Environment />;
+      case "3":
+        return <News />;
+      case "4":
+        return <Contact />;
+      default:
+        return <About />;
+    }
+  };
+
+  return !isTablet ? (
+    <div className={styles.wrapper}>
+      <Menu />
+      {!isTablet && renderMenuItems()}
+    </div>
+  ) : (
+    <div className={styles.mobileWrapper}>
+      <AboutMobile />
+      <LocationMobile />
+      <EnvironmentMobile />
+      <News />
     </div>
   );
 };

@@ -1,0 +1,140 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding-bottom: 30px;
+}
+
+/* .innerImg {
+  position: relative;
+  padding-bottom: calc(0.321 * 100%);
+} */
+
+.image {
+  inset: 0;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 2px;
+}
+
+.location {
+  position: relative;
+}
+
+.subtitle {
+  position: absolute;
+  top: 0;
+  font-size: 16px;
+  font-weight: normal !important;
+  max-width: 240px;
+  color: #3e5559;
+}
+
+.title {
+  position: absolute;
+  top: 50;
+  max-width: 240px;
+  color: #b13e2b;
+}
+
+.textWrapper {
+  margin-left: 350px;
+  margin-top: 45px;
+  height: 280px !important;
+  overflow-y: auto !important;
+  padding-right: 20px;
+}
+
+.text {
+  font-size: 20px;
+  line-height: 1.5;
+}
+
+.mapBottomBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  bottom: 0;
+  right: 12px;
+  height: 56px;
+  background-color: #6f756f;
+  padding: 0 16px 0 20px;
+  gap: 17px;
+  font-size: 14px;
+  color: #fff;
+  cursor: pointer;
+}
+
+@media (hover: hover) {
+  .mapBottomBtn:hover {
+    color: #fff;
+  }
+}
+
+.mapBottomBtnIcon {
+  width: 24px;
+  display: block;
+}
+
+.textWrapper::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+.textWrapper::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+.textWrapper::-webkit-scrollbar-thumb {
+  background: #b8b5ac;
+  border-radius: 10px;
+}
+
+.textWrapper::-webkit-scrollbar-thumb:hover {
+  background: #b8b5ac;
+}
+
+.textWrapper {
+  scrollbar-width: thin;
+  scrollbar-color: #b8b5ac #f1f1f1;
+}
+
+@media (max-width: 1799.98px) {
+  .image {
+    height: 459.4px;
+  }
+}
+
+@media (max-width: 1679.98px) {
+  .image {
+    height: 429.1px;
+  }
+
+  .textWrapper {
+    margin-left: 280px;
+  }
+}
+
+@media (max-width: 1439.98px) {
+  .image {
+    height: 368px;
+  }
+
+  .textWrapper {
+    margin-left: 240px;
+  }
+}
+
+@media (max-width: 1365.98px) {
+  .image {
+    height: 349px;
+  }
+}
+
+@media (max-width: 1279.98px) {
+  .image {
+    height: 327px;
+  }
+}

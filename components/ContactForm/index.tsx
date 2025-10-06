@@ -1,6 +1,5 @@
 import { memo, useState, useEffect } from "react";
 import Image from "next/image";
-import { useTranslation } from "next-i18next";
 import { useFormik } from "formik";
 import * as yup from "yup";
 import TextField from "@mui/material/TextField";
@@ -10,11 +9,8 @@ import CustomSnackbar from "../CustomSnackbar";
 import styles from "./styles.module.css";
 
 import sendIconSrc from "@/assets/images/send-icon.svg";
-import happyIconSrc from "@/assets/images/input-happy-icon.svg";
 
 const ContactForm = () => {
-  const { t, i18n } = useTranslation(["common", "home"]);
-
   const [openSnackbar, setOpenSnackbar] = useState(false);
   const [snackbarMessage, setSnackbarMessage] = useState("");
   const [snackbarSeverity, setSnackbarSeverity] = useState<"success" | "error">(
@@ -23,15 +19,15 @@ const ContactForm = () => {
 
   useEffect(() => {
     formik.resetForm();
-  }, [i18n.language]);
+  }, []);
 
   const validationSchema = yup.object({
-    name: yup.string().required(t("required")),
-    email: yup.string().email(t("invalid-email")).required(t("required")),
+    name: yup.string().required("required"),
+    email: yup.string().email("invalid-email").required("required"),
     phoneNumber: yup
       .string()
-      .required(t("required"))
-      .matches(/^\+?[0-9]{9,15}$/, t("invalid-phone-number")),
+      .required("required")
+      .matches(/^\+?[0-9]{9,15}$/, "invalid-phone-number"),
   });
 
   const formik = useFormik({
@@ -64,15 +60,15 @@ const ContactForm = () => {
 
         if (data.result) {
           setSnackbarSeverity("success");
-          setSnackbarMessage(t("common:success-message"));
+          setSnackbarMessage("common:success-message");
           resetForm();
         } else {
           setSnackbarSeverity("error");
-          setSnackbarMessage(t("common:error-message"));
+          setSnackbarMessage("common:error-message");
         }
       } catch (error) {
         setSnackbarSeverity("error");
-        setSnackbarMessage(t("common:error-message"));
+        setSnackbarMessage("common:error-message");
       }
       setOpenSnackbar(true);
     },
@@ -88,9 +84,6 @@ const ContactForm = () => {
         <form className={styles.form} onSubmit={formik.handleSubmit}>
           <div className={styles.left}>
             <div className={styles.inputField}>
-              <div className="Mui-IconBox">
-                <Image src={happyIconSrc} alt="name" width={33} height={36} />
-              </div>
               <FormControl fullWidth>
                 <TextField
                   label="როგორ მოგმართოთ?"
@@ -109,7 +102,7 @@ const ContactForm = () => {
             <div className={styles.inputField}>
               <FormControl fullWidth>
                 <TextField
-                  label={t("თქვენი მეილი")}
+                  label={"თქვენი მეილი"}
                   name="email"
                   variant="standard"
                   value={formik.values.email}
@@ -144,7 +137,7 @@ const ContactForm = () => {
             <div className={styles.inputField}>
               <FormControl fullWidth>
                 <TextField
-                  label={t("გაქვთ რაიმე კომენტარი?")}
+                  label={"გაქვთ რაიმე კომენტარი?"}
                   name="comment"
                   variant="standard"
                   value={formik.values.comment}
@@ -171,9 +164,9 @@ const ContactForm = () => {
                 src={sendIconSrc}
                 width={26}
                 height={24}
-                alt={t("გაგზავნა")}
+                alt={"გაგზავნა"}
               />
-              {t("გაგზავნა")}
+              {"გაგზავნა"}
             </button>
           </div>
         </form>

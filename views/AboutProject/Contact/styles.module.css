@@ -1,0 +1,162 @@
+.wrapper {
+  display: flex;
+  gap: 60px;
+  width: 100%;
+}
+
+.imageBox {
+  width: 50%;
+}
+
+.formWrapper {
+  width: 50%;
+}
+
+.innerImg {
+  position: relative;
+  padding-bottom: calc(0.638 * 100%);
+}
+
+.image {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 2px;
+}
+
+.headlineTitle {
+  font-size: 29px;
+  color: #3e5559;
+  line-height: 1.2;
+  font-weight: 400 !important;
+  margin-bottom: 12px;
+}
+
+.formBox {
+  position: relative;
+  width: 100%;
+}
+
+.form {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.left {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  margin: 32px 0;
+}
+
+.inputField {
+  display: flex;
+  align-items: center;
+  height: min-content;
+}
+
+.sendBox {
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  margin-top: 12px;
+}
+
+.agreeText {
+  font-size: 14px;
+  color: #4a5b6a;
+}
+
+.agreeText a {
+  font-size: 14px;
+  color: #011a2e;
+  font-weight: 600;
+}
+
+@media (hover: hover) {
+  .agreeText a:hover {
+    color: #011a2e;
+    text-decoration: underline;
+  }
+}
+
+.sendBtn {
+  display: block;
+  height: 46px;
+  background-color: #c16555;
+  border: 0;
+  box-shadow: none;
+  border-radius: 0;
+  color: #fff;
+  font-size: 14px;
+  padding: 0 16px;
+  display: flex;
+  align-items: center;
+}
+
+.sendIcon {
+  display: block;
+  width: 20px;
+  margin-left: 17px;
+}
+
+@media (max-width: 1679.98px) {
+  .headlineTitle {
+    font-size: 26px;
+  }
+}
+
+@media (max-width: 1439.98px) {
+  .headlineTitle {
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 1279.98px) {
+  .headlineTitle {
+    font-size: 22px;
+  }
+
+  .formBox {
+    max-width: 500px;
+    margin: 20px auto 0 auto;
+  }
+
+  .left {
+    margin: 0 0 20px 0;
+    gap: 15px;
+  }
+
+  .wrapper {
+    gap: 20px;
+  }
+}
+
+@media (max-width: 1023.98px) {
+  .headlineTitle {
+    font-size: 16px;
+    max-width: 294px;
+    margin: 100px auto 0 auto;
+  }
+
+  .formBox {
+    max-width: 440px;
+    margin: 20px auto 0 auto;
+  }
+
+  .sendBtn {
+    height: 48px;
+    font-size: 12px;
+  }
+
+  .sendIcon {
+    width: 16px;
+    margin-right: 8px;
+  }
+}

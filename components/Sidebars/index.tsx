@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useRouter } from "next/router";
 import clsx from "clsx";
+import usePreviousPath from "@/hooks/usePreviusPath";
 
 import styles from "./styles.module.css";
 import { motion, Variants } from "framer-motion";
@@ -33,7 +34,7 @@ const rightItemVariants: Variants = {
 
 const Sidebars = () => {
   const router = useRouter();
-
+  const prevPath = usePreviousPath();
   const [navTarget, setNavTarget] = useState<string | null>(null);
 
   useEffect(() => {
@@ -59,32 +60,35 @@ const Sidebars = () => {
     },
   };
 
+  console.log(router.pathname, "this should be correct path");
+
   return (
     <>
-      <header className={styles.header}>
+      <div className={styles.header}>
         <motion.div
           variants={leftItemVariants}
           initial={false}
           animate={
-            navTarget === "/select-land" ||
-            navTarget === "/test" ||
-            ((router.pathname === "/select-land" ||
-              router.pathname === "/test") &&
+            navTarget === "/about-project" ||
+            navTarget === "/about-project/[slug]" ||
+            ((router.pathname === "/about-project" ||
+              router.pathname === "/about-project/[slug]") &&
               navTarget === null)
               ? "active"
               : "inactive"
           }
-          onClick={() => handleNavigation("/select-land")}
+          onClick={() => handleNavigation("/about-project")}
           className={clsx(styles.menuItem, styles.menuItemLeft, {
             [styles.active]:
-              router.pathname === "/select-land" || router.pathname === "/test",
+              router.pathname === "/about-project" ||
+              router.pathname === "/about-project/[slug]",
           })}
         >
           <span className={styles.menuItemLabel}>პროექტის შესახებ</span>
-          {(navTarget === "/select-land" ||
-            (router.pathname === "/select-land" && navTarget === null)) && (
+          {(navTarget === "/about-project" ||
+            (router.pathname === "/about-project" && navTarget === null)) && (
             <motion.div
-              key="select-land-slide"
+              key="about-project-slide"
               variants={testVariants}
               initial="initial"
               animate="animate"
@@ -101,26 +105,48 @@ const Sidebars = () => {
               }}
             />
           )}
+          {router.pathname === "/" &&
+            navTarget === null &&
+            (prevPath === "/about-project/[slug]" ||
+              prevPath === "/about-project") && (
+              <motion.div
+                key="slide"
+                variants={testVariants}
+                initial="initial"
+                animate="animate"
+                exit="exit"
+                style={{
+                  position: "absolute",
+                  top: 0,
+                  left: 0,
+                  width: "100vw",
+                  height: "100vh",
+                  backgroundColor: "#B23F2A",
+                  zIndex: -1,
+                  pointerEvents: "none",
+                }}
+              />
+            )}
         </motion.div>
         <motion.div
           variants={rightItemVariants}
           initial={false}
           animate={
-            navTarget === "/about-project" ||
-            (router.pathname === "/about-project" && navTarget === null)
+            navTarget === "/select-land" ||
+            (router.pathname === "/select-land" && navTarget === null)
               ? "active"
               : "inactive"
           }
-          onClick={() => handleNavigation("/about-project")}
+          onClick={() => handleNavigation("/select-land")}
           className={clsx(styles.menuItem, styles.menuItemRight, {
-            [styles.active]: router.pathname === "/about-project",
+            [styles.active]: router.pathname === "/select-land",
           })}
         >
           <span className={styles.menuItemLabel}>შეარჩიე მიწის ნაკვეთი</span>
-          {(navTarget === "/about-project" ||
-            (router.pathname === "/about-project" && navTarget === null)) && (
+          {(navTarget === "/select-land" ||
+            (router.pathname === "/select-land" && navTarget === null)) && (
             <motion.div
-              key="about-project-slide"
+              key="select-land-slide"
               variants={testVariants}
               initial="initial"
               animate="animate"
@@ -137,8 +163,29 @@ const Sidebars = () => {
               }}
             />
           )}
+          {router.pathname === "/" &&
+            navTarget === null &&
+            prevPath === "/select-land" && (
+              <motion.div
+                key="exit-slide"
+                variants={testVariants}
+                initial="initial"
+                animate="animate"
+                exit="exit"
+                style={{
+                  position: "absolute",
+                  top: 0,
+                  right: 0,
+                  width: "100vw",
+                  height: "100vh",
+                  backgroundColor: "#6F756F",
+                  zIndex: -1,
+                  pointerEvents: "none",
+                }}
+              />
+            )}
         </motion.div>
-      </header>
+      </div>
     </>
   );
 };

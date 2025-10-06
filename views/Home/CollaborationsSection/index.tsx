@@ -1,7 +1,5 @@
 import React from "react";
 import Image from "next/image";
-import { useTranslation, Trans } from "next-i18next";
-import { Swiper, SwiperSlide } from "swiper/react";
 
 import { useMediaQuery } from "@/hooks";
 
@@ -17,7 +15,7 @@ type CollaborationsSectionProps = {
 };
 
 const CollaborationsSection = ({ data }: CollaborationsSectionProps) => {
-  const { t } = useTranslation(["common", "home"]);
+  // const { t } = useTranslation(["common", "home"]);
   const isTablet = useMediaQuery("(max-width: 1023.98px)");
 
   return (
@@ -48,7 +46,7 @@ const CollaborationsSection = ({ data }: CollaborationsSectionProps) => {
                 src={sendIconSrc}
                 width={26}
                 height={24}
-                alt={t("common:send")}
+                alt={"common:send"}
               />
             </button>
           ) : null}
@@ -63,7 +61,7 @@ const CollaborationsSection = ({ data }: CollaborationsSectionProps) => {
               src={sendIconSrc}
               width={26}
               height={24}
-              alt={t("common:send")}
+              alt={"common:send"}
             />
           </button>
         ) : null}

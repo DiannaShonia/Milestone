@@ -1,6 +1,5 @@
 import React from "react";
 import Image from "next/image";
-import { useTranslation } from "next-i18next";
 
 import styles from "./styles.module.css";
 
@@ -13,7 +12,7 @@ type SalesSectionProps = {
 };
 
 const SalesSection = ({ data }: SalesSectionProps) => {
-  const { t } = useTranslation(["common", "home"]);
+  // const { t } = useTranslation(["common", "home"]);
   const isTablet = useMediaQuery("(max-width: 1023.98px)");
 
   return (
@@ -53,7 +52,7 @@ const SalesSection = ({ data }: SalesSectionProps) => {
               src={sendIconSrc}
               width={isTablet ? 16 : 24}
               height={isTablet ? 16 : 24}
-              alt={t("common:send")}
+              alt={"common:send"}
             />
           </button>
         </div>

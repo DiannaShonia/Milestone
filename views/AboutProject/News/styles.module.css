@@ -1,0 +1,133 @@
+.wrapper {
+  display: flex;
+  align-items: flex-end;
+  width: 100%;
+  justify-content: flex-end;
+  flex-direction: column;
+}
+
+.titleWrapper {
+  display: flex;
+  align-items: center;
+  margin: 18px 0 12px 0;
+  justify-content: space-between;
+}
+
+.title {
+  font-size: 20px;
+  font-weight: 600 !important;
+  line-height: 1.4;
+}
+
+.date {
+  font-size: 14px;
+  color: #6f756f;
+}
+
+.list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px;
+  width: 70%;
+  overflow-y: auto !important;
+  height: 100dvh;
+  scrollbar-width: thin;
+  scrollbar-color: #b8b5ac #f1f1f1;
+  padding-right: 20px;
+  padding-bottom: 140px;
+  scroll-padding-bottom: 140px;
+}
+
+.imageBox {
+  position: relative;
+}
+
+.innerImg {
+  position: relative;
+  padding-bottom: calc(0.616 * 100%);
+}
+
+.image {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 2px;
+}
+
+.item {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  cursor: pointer;
+}
+
+.description {
+  font-size: 20px;
+  color: #000;
+  line-height: 1.5;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  line-clamp: 2;
+}
+
+.list::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+.list::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+.list::-webkit-scrollbar-thumb {
+  background: #b8b5ac;
+  border-radius: 10px;
+}
+
+.list::-webkit-scrollbar-thumb:hover {
+  background: #b8b5ac;
+}
+
+.mainTitle {
+  font-size: 16px;
+  font-weight: normal !important;
+  padding: 6px 16px;
+  background-color: #b8b5ac;
+  color: #fff;
+  width: max-content;
+  margin-bottom: 24px;
+}
+
+@media (max-width: 1679.98px) {
+  .title {
+    font-size: 16px;
+  }
+
+  .description {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 1023.98px) {
+  .wrapper {
+    padding-bottom: 170px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+  .list {
+    width: 100%;
+    grid-template-columns: 1fr; /* 1 column on smaller screens */
+    height: auto !important;
+    overflow-y: visible !important;
+    padding-right: 0;
+    gap: 60px;
+  }
+}

@@ -1,6 +1,5 @@
 import React from "react";
 import Image from "next/image";
-import { useTranslation } from "next-i18next";
 
 import styles from "./styles.module.css";
 
@@ -15,7 +14,7 @@ type ArchitectSectionProps = {
 };
 
 const ArchitectSection = ({ data }: ArchitectSectionProps) => {
-  const { t } = useTranslation(["common", "home"]);
+  // const { t } = useTranslation(["common", "home"]);
 
   return (
     <div className={styles.wrapper}>
@@ -45,13 +44,13 @@ const ArchitectSection = ({ data }: ArchitectSectionProps) => {
           </div>
         </div>
         <button className={styles.sendBtn}>
-          {t("გაიგე მეტი")}
+          {"გაიგე მეტი"}
           <Image
             className={styles.sendIcon}
             src={sendIconSrc}
             width={26}
             height={24}
-            alt={t("")}
+            alt={""}
           />
         </button>
       </div>

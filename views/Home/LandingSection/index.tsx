@@ -1,6 +1,5 @@
 import React, { useEffect, useRef } from "react";
 import { useMediaQuery } from "@/hooks";
-import { useTranslation } from "next-i18next";
 
 import styles from "./styles.module.css";
 
@@ -13,7 +12,7 @@ type LandingSectionProps = {
 };
 
 const LandingSection = ({ data }: LandingSectionProps) => {
-  const { t } = useTranslation(["common", "home"]);
+  // const { t } = useTranslation(["common", "home"]);
   const isMobile = useMediaQuery("(max-width: 767.98px)");
   const isTablet = useMediaQuery("(max-width: 1024px)");
 
