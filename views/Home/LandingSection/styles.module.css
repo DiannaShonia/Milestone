@@ -1,6 +1,9 @@
 .videoBox {
   position: relative;
   height: calc(100svh);
+  margin-left: -120px;
+  margin-right: -120px;
+  margin-top: -96px;
 }
 
 .video {
@@ -13,7 +16,7 @@
 }
 
 .infoBox {
-  padding: 120px 75px;
+  padding: 120px 0px;
 }
 
 .title {
@@ -29,10 +32,6 @@
 }
 
 @media (max-width: 1679.98px) {
-  .infoBox {
-    padding: 70px 75px;
-  }
-
   .title {
     font-size: 52px;
   }
@@ -43,50 +42,29 @@
 }
 
 @media (max-width: 1439.98px) {
-  .infoBox {
-    padding: 50px 75px;
-  }
-
   .title {
-    font-size: 44px;
+    font-size: 40px;
   }
 
   .text {
     font-size: 16px;
   }
+
+  .infoBox {
+    padding: 100px 0px;
+  }
 }
 
 @media (max-width: 1279.98px) {
-  .infoBox {
-    padding: 40px 75px;
-  }
-
   .title {
-    font-size: 36px;
+    font-size: 34px;
   }
 
   .text {
     font-size: 14px;
   }
-}
 
-@media (max-width: 1023.98px) {
   .infoBox {
-    padding: 30px 0;
-  }
-
-  .title {
-    font-size: 32px;
-    margin-bottom: 16px;
-  }
-}
-
-@media (max-width: 767.98px) {
-  .infoBox {
-    padding: 24px 0;
-  }
-
-  .title {
-    font-size: 24px;
+    padding: 80px 0px;
   }
 }

@@ -4,7 +4,7 @@ import type {
   InferGetStaticPropsType,
 } from "next";
 import { PageLayout } from "@/components";
-import { newsData } from "@/mockData";
+import { newsData } from "@/mockData/news";
 import NewsItemView from "@/views/NewsItem";
 
 type Props = {

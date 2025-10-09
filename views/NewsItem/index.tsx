@@ -24,18 +24,13 @@ const NewsItem = ({ data }: ViewProps) => {
       </div>
       <div className={styles.container}>
         <div key={data.slug} className={styles.item}>
-          <div className={styles.imageBox}>
-            <div className={styles.innerImg}>
-              <Image src={data.src} className={styles.image} alt="" />
-            </div>
+          <div className={styles.innerImg}>
+            <Image src={data.src} className={styles.image} alt="" />
           </div>
-          <Link
-            href={`/about-project/${data.slug}`}
-            className={styles.titleWrapper}
-          >
+          <div className={styles.titleWrapper}>
             <h3 className={styles.title}>{data.title}</h3>
             <p className={styles.date}>{data.date}</p>
-          </Link>
+          </div>
           <div className={styles.textWrapper}>
             <p className={styles.description}>
               კომპანია მაილსთოუნი წავკისში  ექსკლუზიურ პროექტს იწყებს. ტყეში
@@ -102,7 +97,7 @@ const NewsItem = ({ data }: ViewProps) => {
               <br />
               მაილსტოუნი არის შინაარსზე ორიენტირებული უძრავი ქონების მართვის და
               განვითარების კომპანია,რომელიც  ქმნის და ავითარებს უნიკალურ
-              კონცეფციებს, ამკვიდრებთ სრულფასოვანი ცხოვრების სტანდარტს.
+              კონცეფციებს, ამკვიდრებთ სრულფასოვანი ცხოვრების სტანდარტს. End
             </p>
           </div>
         </div>

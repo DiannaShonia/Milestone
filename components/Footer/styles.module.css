@@ -1,11 +1,13 @@
 .footer {
   position: relative;
+  margin-left: -120px;
+  margin-right: -120px;
   margin-top: 400px;
-  padding: 0 76px;
 }
 
 .top {
   position: relative;
+  padding: 0 119px;
 }
 
 .paper {
@@ -22,10 +24,6 @@
   height: 100%;
   object-fit: cover;
   object-position: top center;
-}
-
-.contactWrapper {
-  padding: 0 75px;
 }
 
 .paperImg:nth-child(1) {
@@ -103,7 +101,7 @@
 }
 
 .bottom {
-  padding: 60px 0 32px 0;
+  padding: 60px 119px;
   background-color: #3e5559;
 }
 
@@ -180,7 +178,6 @@
 @media (max-width: 1679.98px) {
   .footer {
     margin-top: 340px;
-    padding: 0 76px;
   }
 
   .topContent {
@@ -203,10 +200,6 @@
   .mapTopTitle {
     font-size: 28px;
     margin-top: 10px;
-  }
-
-  .bottom {
-    padding: 54px 0 30px 0;
   }
 
   .dots {
@@ -240,10 +233,6 @@
   .bottomItemTitle {
     font-size: 18px;
     margin-bottom: 8px;
-  }
-
-  .bottom {
-    padding: 50px 0 30px 0;
   }
 
   .dots {
@@ -305,10 +294,6 @@
   .bottomItemTitle {
     font-size: 16px;
     margin-bottom: 8px;
-  }
-
-  .bottom {
-    padding: 50px 0 30px 0;
   }
 
   .dots {

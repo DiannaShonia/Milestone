@@ -1,9 +1,21 @@
 .wrapper {
-  padding: 0 76px;
+  padding: 0 195px;
+}
+
+@media (max-width: 1679.98px) {
+  .wrapper {
+    padding: 0 160px;
+  }
+}
+
+@media (max-width: 1439.98px) {
+  .wrapper {
+    padding: 0 130px;
+  }
 }
 
 @media (max-width: 1023.98) {
   .wrapper {
-    padding: 0;
+    padding: 0 24px;
   }
 }

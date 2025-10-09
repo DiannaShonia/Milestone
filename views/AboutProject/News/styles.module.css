@@ -30,12 +30,13 @@
   gap: 40px;
   width: 70%;
   overflow-y: auto !important;
-  height: 100dvh;
+  height: calc(100dvh - 96px);
   scrollbar-width: thin;
   scrollbar-color: #b8b5ac #f1f1f1;
   padding-right: 20px;
-  padding-bottom: 140px;
+  padding-bottom: 50px;
   scroll-padding-bottom: 140px;
+  margin-bottom: 24px;
 }
 
 .imageBox {
@@ -112,6 +113,52 @@
   .description {
     font-size: 16px;
   }
+
+  .list {
+    gap: 30px;
+  }
+
+  .titleWrapper {
+    margin: 12px 0;
+  }
+}
+
+@media (max-width: 1439.98px) {
+  .title {
+    font-size: 15px;
+  }
+
+  .description {
+    font-size: 15px;
+  }
+
+  .list {
+    gap: 25px;
+  }
+
+  .titleWrapper {
+    margin: 10px 0;
+  }
+}
+
+@media (max-width: 1279.98px) {
+  .title {
+    font-size: 14px;
+  }
+
+  .description {
+    font-size: 14px;
+  }
+
+  .list {
+    gap: 20px;
+  }
+}
+
+@media (max-width: 1279.98px) {
+  .list {
+    grid-template-columns: 1fr;
+  }
 }
 
 @media (max-width: 1023.98px) {
@@ -124,7 +171,7 @@
   }
   .list {
     width: 100%;
-    grid-template-columns: 1fr; /* 1 column on smaller screens */
+    grid-template-columns: 1fr;
     height: auto !important;
     overflow-y: visible !important;
     padding-right: 0;

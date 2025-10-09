@@ -1,6 +1,5 @@
 .wrapper {
-  margin-top: 280px;
-  padding: 0 75px;
+  margin-top: 200px;
 }
 
 .row {
@@ -17,7 +16,7 @@
 
 .textBoxTitle {
   font-size: 30px;
-  line-height: 125%;
+  line-height: 1.2;
   color: #000;
   font-weight: 700;
   width: 100%;
@@ -26,7 +25,7 @@
 
 .textBoxText {
   font-size: 20px;
-  line-height: 150%;
+  line-height: 1.5;
   color: #000;
   margin-top: 25px;
   line-height: 30px;
@@ -53,7 +52,23 @@
   grid-area: img3;
 }
 
+.innerImg1 {
+  padding-bottom: calc(100% * 0.59);
+  position: relative;
+}
+
+.innerImg2 {
+  padding-bottom: calc(100% * 0.12);
+  position: relative;
+}
+
+.innerImg3 {
+  padding-bottom: calc(100% * 0.27);
+  position: relative;
+}
+
 .image {
+  position: absolute;
   display: block;
   width: 100%;
   height: 100%;
@@ -84,29 +99,44 @@
 }
 
 @media (max-width: 1679.98px) {
-  .wrapper {
-    padding: 0 75px !important;
-  }
-
   .textBoxText {
     font-size: 16px;
+  }
+
+  .wrapper {
+    margin-top: 180px;
+  }
+
+  .textBoxTitle {
+    font-size: 28px;
   }
 }
 
 @media (max-width: 1439.98px) {
   .wrapper {
-    padding: 0 26px 0 20px;
     margin-top: 160px;
   }
 
+  .textBoxTitle {
+    font-size: 26px;
+  }
+
   .textBoxText {
-    font-size: 14px;
+    font-size: 16px;
+    line-height: 1.6;
   }
 }
 
 @media (max-width: 1279.98px) {
   .wrapper {
-    padding: 0 28px 0 20px;
     margin-top: 120px;
+  }
+
+  .textBoxTitle {
+    font-size: 24px;
+  }
+
+  .textBoxText {
+    font-size: 14px;
   }
 }

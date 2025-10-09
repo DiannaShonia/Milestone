@@ -13,14 +13,12 @@
 }
 
 .innerImg {
-  position: relative;
-  padding-bottom: calc(0.638 * 100%);
+  height: 46vh;
+  width: auto;
 }
 
 .image {
-  position: absolute;
-  inset: 0;
-  width: 100%;
+  width: auto;
   height: 100%;
   object-fit: cover;
   object-position: center;
@@ -50,7 +48,7 @@
 .left {
   display: flex;
   flex-direction: column;
-  gap: 30px;
+  gap: 40px;
   margin: 32px 0;
 }
 

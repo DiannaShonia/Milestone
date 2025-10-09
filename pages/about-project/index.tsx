@@ -1,7 +1,7 @@
 import type { GetStaticProps, InferGetStaticPropsType } from "next";
 import View from "@/views/AboutProject";
 import { PageLayout, Seo } from "@/components";
-import { newsData } from "@/mockData";
+import { newsData } from "@/mockData/news";
 
 type Props = {
   data: any | null;

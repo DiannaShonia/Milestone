@@ -39,9 +39,7 @@ const Environment = () => {
         >
           {images.map((image, i) => (
             <SwiperSlide className={styles.swiperSlide} key={i}>
-              <div className={styles.innerImg}>
-                <Image src={image.imgSrc} alt="" className={styles.image} />
-              </div>
+              <Image src={image.imgSrc} alt="" className={styles.image} />
             </SwiperSlide>
           ))}
         </Swiper>

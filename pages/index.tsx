@@ -1,7 +1,6 @@
 import type { GetStaticProps, InferGetStaticPropsType } from "next";
 import View from "@/views/Home";
 import { Seo, Footer, PageLayout } from "@/components";
-import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 
 type Props = {
   data: any | null;
@@ -14,7 +13,6 @@ const HomePage = ({ data }: InferGetStaticPropsType<typeof getStaticProps>) => {
       <PageLayout>
         <View data={data} />
       </PageLayout>
-      <Footer />
     </>
   );
 };

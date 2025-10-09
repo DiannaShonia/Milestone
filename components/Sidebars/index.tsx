@@ -14,7 +14,7 @@ const leftItemVariants: Variants = {
   },
   active: {
     left: "auto",
-    right: 76,
+    right: 75,
     transition: { duration: 1, ease: [0.7, 0, 0.3, 1] },
   },
 };
@@ -26,7 +26,7 @@ const rightItemVariants: Variants = {
     transition: { duration: 1, ease: [0.7, 0, 0.3, 1] },
   },
   active: {
-    left: 76,
+    left: 75,
     right: "auto",
     transition: { duration: 1, ease: [0.7, 0, 0.3, 1] },
   },
@@ -42,7 +42,6 @@ const Sidebars = () => {
       setNavTarget(null);
     }
     if (!navTarget) {
-      // no-op, but keeps logic explicit
     }
   }, [router.pathname]);
 
@@ -56,7 +55,7 @@ const Sidebars = () => {
     initial: { width: "100vw" },
     animate: {
       width: "0",
-      transition: { duration: 1.5, delay: 0.2, ease: [0.7, 0, 0.3, 1] },
+      transition: { duration: 1.7, delay: 0.2, ease: [0.7, 0, 0.3, 1] },
     },
   };
 
@@ -84,7 +83,7 @@ const Sidebars = () => {
               router.pathname === "/about-project/[slug]",
           })}
         >
-          <span className={styles.menuItemLabel}>პროექტის შესახებ</span>
+          <span className={styles.menuItemLabel}>ᲞᲠᲝᲔᲥᲢᲘᲡ ᲨᲔᲡᲐᲮᲔᲑ</span>
           {(navTarget === "/about-project" ||
             (router.pathname === "/about-project" && navTarget === null)) && (
             <motion.div
@@ -142,7 +141,7 @@ const Sidebars = () => {
             [styles.active]: router.pathname === "/select-land",
           })}
         >
-          <span className={styles.menuItemLabel}>შეარჩიე მიწის ნაკვეთი</span>
+          <span className={styles.menuItemLabel}>ᲨᲔᲐᲠᲩᲘᲔ ᲛᲘᲬᲘᲡ ᲜᲐᲙᲕᲔᲗᲘ</span>
           {(navTarget === "/select-land" ||
             (router.pathname === "/select-land" && navTarget === null)) && (
             <motion.div

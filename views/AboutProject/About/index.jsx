@@ -29,7 +29,7 @@ const About = () => {
       }}
       className={styles.wrapper}
     >
-      <div className={styles.slider}>
+      <div>
         <Swiper
           className={styles.swiper}
           spaceBetween={16}
@@ -38,9 +38,7 @@ const About = () => {
         >
           {images.map((image, i) => (
             <SwiperSlide className={styles.swiperSlide} key={i}>
-              <div className={styles.innerImg}>
-                <Image src={image.imgSrc} alt="" className={styles.image} />
-              </div>
+              <Image src={image.imgSrc} alt="" className={styles.image} />
             </SwiperSlide>
           ))}
         </Swiper>

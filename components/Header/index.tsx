@@ -34,39 +34,37 @@ const Header = () => {
             pathname === "/select-land" ? styles.select : ""
           )}
         >
-          <div className={styles.row}>
-            <div>
-              <div className={styles.logoBox}>
-                <Link href={"./"}>
-                  <Image
-                    src={logoSrc}
-                    alt="Milestone Logo"
-                    width={150}
-                    height={50}
-                    className={styles.logo}
-                  />
-                </Link>
-              </div>
+          <div>
+            <div className={styles.logoBox}>
+              <Link href={"./"}>
+                <Image
+                  src={logoSrc}
+                  alt="Milestone Logo"
+                  width={150}
+                  height={50}
+                  className={styles.logo}
+                />
+              </Link>
             </div>
-            <div>
-              <div className={styles.languages}>
-                <span
-                  className={clsx(styles.language, {
-                    [styles.active]: router.locale === "ka",
-                  })}
-                  onClick={() => handleChangeLanguage("ka")}
-                >
-                  ქარ
-                </span>
-                <span
-                  className={clsx(styles.language, {
-                    [styles.active]: router.locale === "en",
-                  })}
-                  onClick={() => handleChangeLanguage("en")}
-                >
-                  En
-                </span>
-              </div>
+          </div>
+          <div>
+            <div className={styles.languages}>
+              <span
+                className={clsx(styles.language, {
+                  [styles.active]: router.locale === "ka",
+                })}
+                onClick={() => handleChangeLanguage("ka")}
+              >
+                ქარ
+              </span>
+              <span
+                className={clsx(styles.language, {
+                  [styles.active]: router.locale === "en",
+                })}
+                onClick={() => handleChangeLanguage("en")}
+              >
+                En
+              </span>
             </div>
           </div>
         </div>

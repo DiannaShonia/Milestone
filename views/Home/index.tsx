@@ -6,6 +6,7 @@ import ArchitectSectionMobile from "./ArchitectSectionMobile";
 import SalesSection from "./SalesSection";
 import CollaborationsSection from "./CollaborationsSection";
 import LandingSectionMobile from "./LandingSectionMobile";
+import Footer from "@/components/Footer";
 
 import styles from "./styles.module.css";
 
@@ -31,6 +32,7 @@ const View = ({ data }: ViewProps) => {
       )}
       <SalesSection />
       <CollaborationsSection />
+      <Footer />
     </div>
   );
 };

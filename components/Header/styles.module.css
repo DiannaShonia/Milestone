@@ -1,47 +1,52 @@
 .header {
-  position: fixed;
+  position: sticky;
   top: 0;
   left: 0;
-  width: 100%;
   z-index: 999;
-  padding: 30px 0;
   mix-blend-mode: difference;
-  max-height: 96px;
+  height: 96px;
+}
+
+.wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: 100%;
+  padding: 0px 146px;
+  transition: ease-in-out 0s 0.75s;
+}
+
+.about {
+  padding: 30px 196px;
+  transition: ease-in-out 0s 0.75s;
+}
+
+.select {
+  padding-right: 246px;
+  transition: ease-in-out 0s 0.75s;
 }
 
 .filledBackground {
   background-color: #faf8ec;
   mix-blend-mode: normal;
+  transition: ease-in-out 0s 0.75s;
 }
 
 .filledBackground .language {
   color: #000;
+  transition: ease-in-out 0s 0.75s;
 }
 
 .filledBackground .logo {
   filter: invert(1);
+  transition: ease-in-out 0s 0.75s;
 }
 
 .row {
   display: flex;
   align-items: center;
   justify-content: space-between;
-}
-
-.wrapper {
-  margin-right: auto;
-  margin-left: auto;
-  transition: padding 0.5 ease 1.5s;
-  padding-left: 146px;
-  padding-right: 146px;
-}
-
-.about {
-  padding-right: 196px;
-}
-
-.select {
-  padding-right: 246px;
 }
 
 .logoBox {
@@ -81,6 +86,10 @@
   .logoBox {
     width: 180px;
   }
+
+  .about {
+    padding-left: 100px;
+  }
 }
 
 @media (max-width: 1439.98px) {
@@ -91,6 +100,10 @@
   .logoBox {
     width: 170px;
   }
+
+  .about {
+    padding-left: 56px;
+  }
 }
 
 @media (max-width: 1279.98px) {
@@ -100,6 +113,10 @@
 
   .logoBox {
     width: 160px;
+  }
+
+  .about {
+    padding-left: 36px;
   }
 }
 

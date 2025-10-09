@@ -48,13 +48,13 @@ const ArchitectSection = ({ data }: ArchitectSectionProps) => {
         </div>
 
         <div className={styles.imageBox}>
-          <div className={styles.img}>
+          <div className={styles.innerImg1}>
             <Image src={img2Src} alt="" className={styles.image} />
           </div>
-          <div className={styles.img}>
+          <div className={styles.innerImg2}>
             <Image src={img3Src} alt="" className={styles.image} />
           </div>
-          <div className={styles.img}>
+          <div className={styles.innerImg3}>
             <Image src={img1Src} alt="" className={styles.image} />
           </div>
         </div>

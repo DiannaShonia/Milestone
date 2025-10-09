@@ -2,7 +2,7 @@ import React from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import Link from "next/link";
-import { newsData } from "@/mockData";
+import { newsData } from "@/mockData/news";
 import styles from "./styles.module.css";
 import { useMediaQuery } from "@mui/material";
 
@@ -25,21 +25,22 @@ const News = ({ data }: any) => {
         {newsData.map((news: any) => {
           console.log(news.slug, "--slug");
           return (
-            <div key={news.slug} className={styles.item}>
+            <Link
+              href={`/about-project/${news.slug}`}
+              key={news.slug}
+              className={styles.item}
+            >
               <div className={styles.imageBox}>
                 <div className={styles.innerImg}>
                   <Image src={news.src} className={styles.image} alt="" />
                 </div>
               </div>
-              <Link
-                href={`/about-project/${news.slug}`}
-                className={styles.titleWrapper}
-              >
+              <div className={styles.titleWrapper}>
                 <h3 className={styles.title}>{news.title}</h3>
                 <p className={styles.date}>{news.date}</p>
-              </Link>
+              </div>
               <p className={styles.description}>{news.description}</p>
-            </div>
+            </Link>
           );
         })}
       </div>

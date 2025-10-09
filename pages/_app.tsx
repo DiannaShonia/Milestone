@@ -30,15 +30,7 @@ function App({ Component, pageProps, router }: AppProps) {
       <div className="page-wrap">
         <div>
           {isTablet ? <SidebarsMobile /> : <Sidebars />}
-          <main
-            style={{
-              paddingRight:
-                !isTablet && pathname === "/about-project" ? "152px" : "",
-              paddingLeft:
-                !isTablet && pathname === "/select-land" ? "152px" : "",
-              position: "relative",
-            }}
-          >
+          <main>
             <Header />
             <AnimatePresence mode="wait">
               <Component {...pageProps} key={router.asPath} />
