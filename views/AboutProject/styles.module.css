@@ -26,6 +26,7 @@
 
 @media (max-width: 1439.98px) {
   .wrapper {
+    height: calc(100vh - 80px);
     padding-left: 56px;
   }
   .item {
@@ -36,5 +37,6 @@
 @media (max-width: 1279.98px) {
   .wrapper {
     padding-left: 36px;
+    height: calc(100vh - 70px);
   }
 }

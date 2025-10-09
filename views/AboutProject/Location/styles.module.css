@@ -6,13 +6,11 @@
 }
 
 .innerImg {
-  position: relative;
-  padding-bottom: calc(0.32 * 100%);
+  height: 46vh;
+  width: 100%;
 }
 
 .image {
-  position: absolute;
-  inset: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -103,40 +101,17 @@
   scrollbar-color: #b8b5ac #f1f1f1;
 }
 
-@media (max-width: 1799.98px) {
-  /* .image {
-    height: 459.4px;
-  } */
-}
-
 @media (max-width: 1679.98px) {
-  /* .image {
-    height: 429.1px;
-  } */
-
   .textWrapper {
     margin-left: 280px;
   }
 }
 
 @media (max-width: 1439.98px) {
-  /* .image {
-    height: 368px;
-  } */
-
   .textWrapper {
     margin-left: 240px;
   }
 }
 
-@media (max-width: 1365.98px) {
-  /* .image {
-    height: 349px;
-  } */
-}
-
 @media (max-width: 1279.98px) {
-  /* .image {
-    height: 327px;
-  } */
 }

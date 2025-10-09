@@ -11,7 +11,7 @@
 }
 
 .slug {
-  left: 195px !important;
+  left: 196px !important;
 }
 
 .item {
@@ -29,23 +29,16 @@
 }
 
 @media (max-width: 1679.98px) {
-  .wrapper {
-    padding: 100px 16px 0 100px;
-  }
-
   .item {
     font-size: 18px;
   }
 
   .slug {
-    left: 150px !important;
+    left: 100px !important;
   }
 }
 
 @media (max-width: 1439.98px) {
-  .wrapper {
-    padding: 100px 16px 0 56px;
-  }
   .item {
     font-size: 16px;
   }
@@ -53,11 +46,9 @@
   .menu {
     top: calc(40px + 46dvh);
   }
-}
 
-@media (max-width: 1365.98px) {
   .slug {
-    left: 120px !important;
+    left: 56px !important;
   }
 }
 
@@ -71,6 +62,6 @@
   }
 
   .slug {
-    left: 80px !important;
+    left: 36px !important;
   }
 }

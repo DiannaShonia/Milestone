@@ -5,6 +5,8 @@ import Menu from "@/components/Menu";
 import { useMenuStore } from "@/store/useMenuStore";
 import { useEffect } from "react";
 
+import IconSrc from "@/assets/images/goBackIcon.svg";
+
 import styles from "./styles.module.css";
 
 type ViewProps = {
@@ -24,6 +26,9 @@ const NewsItem = ({ data }: ViewProps) => {
       </div>
       <div className={styles.container}>
         <div key={data.slug} className={styles.item}>
+          <Link href={"/about-project"} className={styles.iconWrapper}>
+            <Image src={IconSrc} className={styles.icon} alt="" />
+          </Link>
           <div className={styles.innerImg}>
             <Image src={data.src} className={styles.image} alt="" />
           </div>

@@ -84,26 +84,28 @@ const Sidebars = () => {
           })}
         >
           <span className={styles.menuItemLabel}>ᲞᲠᲝᲔᲥᲢᲘᲡ ᲨᲔᲡᲐᲮᲔᲑ</span>
-          {(navTarget === "/about-project" ||
-            (router.pathname === "/about-project" && navTarget === null)) && (
-            <motion.div
-              key="about-project-slide"
-              variants={testVariants}
-              initial="initial"
-              animate="animate"
-              exit="exit"
-              style={{
-                position: "absolute",
-                top: 0,
-                right: 0,
-                width: "100vw",
-                height: "100vh",
-                backgroundColor: "#B23F2A",
-                zIndex: -1,
-                pointerEvents: "none",
-              }}
-            />
-          )}
+          {(router.pathname === "/about-project" && navTarget === null) ||
+            (prevPath === "/about-project/[slug]" &&
+              router.pathname === "/about-project") ||
+            (navTarget === "/about-project" && (
+              <motion.div
+                key="about-project-slide"
+                variants={testVariants}
+                initial="initial"
+                animate="animate"
+                exit="exit"
+                style={{
+                  position: "absolute",
+                  top: 0,
+                  right: 0,
+                  width: "100vw",
+                  height: "100vh",
+                  backgroundColor: "#B23F2A",
+                  zIndex: -1,
+                  pointerEvents: "none",
+                }}
+              />
+            ))}
           {router.pathname === "/" &&
             navTarget === null &&
             (prevPath === "/about-project/[slug]" ||

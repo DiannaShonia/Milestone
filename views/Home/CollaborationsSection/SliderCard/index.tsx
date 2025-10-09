@@ -42,7 +42,7 @@ const SliderCard = () => {
       >
         {images.map((image, i) => (
           <SwiperSlide key={i}>
-            <div className={styles.img}>
+            <div className={styles.innerImg}>
               <Image src={image.imgSrc} alt="" className={styles.image} />
             </div>
           </SwiperSlide>

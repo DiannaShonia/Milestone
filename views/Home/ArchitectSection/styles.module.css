@@ -33,37 +33,11 @@
 }
 
 .imageBox {
-  display: grid;
   width: 60%;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  grid-template-areas: "img1 img1 img2" "img3 img3 img3";
-  gap: 12px;
 }
 
-.imageBox > :first-child {
-  grid-area: img1;
-}
-
-.imageBox > :nth-child(2) {
-  grid-area: img2;
-}
-
-.imageBox > :last-child {
-  grid-area: img3;
-}
-
-.innerImg1 {
-  padding-bottom: calc(100% * 0.59);
-  position: relative;
-}
-
-.innerImg2 {
-  padding-bottom: calc(100% * 0.12);
-  position: relative;
-}
-
-.innerImg3 {
-  padding-bottom: calc(100% * 0.27);
+.innerImg {
+  padding-bottom: calc(100% * 0.68);
   position: relative;
 }
 

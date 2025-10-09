@@ -14,11 +14,33 @@
 }
 
 .item {
-  width: 65%;
+  width: 60%;
   display: flex;
   flex-direction: column;
   flex: 1 1 auto;
   min-height: 0;
+  position: relative;
+}
+
+.iconWrapper {
+  position: absolute;
+  top: 0;
+  left: -60px;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+
+.icon {
+  width: 22px;
+  height: 22px;
+  object-fit: cover;
+  object-position: center;
 }
 
 .titleWrapper {

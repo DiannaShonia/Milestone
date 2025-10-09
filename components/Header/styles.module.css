@@ -79,10 +79,6 @@
 }
 
 @media (max-width: 1679.98px) {
-  .header {
-    padding: 26px 0;
-  }
-
   .logoBox {
     width: 180px;
   }
@@ -94,7 +90,7 @@
 
 @media (max-width: 1439.98px) {
   .header {
-    padding: 22px 0;
+    height: 80px;
   }
 
   .logoBox {
@@ -108,7 +104,7 @@
 
 @media (max-width: 1279.98px) {
   .header {
-    padding: 18px 0;
+    height: 70px;
   }
 
   .logoBox {
