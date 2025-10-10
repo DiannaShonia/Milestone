@@ -1,24 +1,30 @@
-import React from "react";
+import { useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper/modules";
 import { motion } from "framer-motion";
-
 import Image from "next/image";
+import LightGallery from "@/components/LightGallery";
 
 import styles from "./styles.module.css";
 
-import ImageSrc1 from "@/assets/images/environment1.png";
-import ImageSrc2 from "@/assets/images/environment2.png";
-
 const images = [
-  { imgSrc: ImageSrc1 },
-  { imgSrc: ImageSrc2 },
-  { imgSrc: ImageSrc1 },
-  { imgSrc: ImageSrc2 },
-  { imgSrc: ImageSrc1 },
+  { url: "/images/environment1.png", alt: "" },
+  { url: "/images/environment2.png", alt: "" },
+  { url: "/images/environment1.png", alt: "" },
+  { url: "/images/environment2.png", alt: "" },
+  { url: "/images/environment1.png", alt: "" },
+  { url: "/images/environment1.png", alt: "" },
+  { url: "/images/environment2.png", alt: "" },
+  { url: "/images/environment1.png", alt: "" },
+  { url: "/images/environment2.png", alt: "" },
+  { url: "/images/environment1.png", alt: "" },
 ];
 
 const Environment = () => {
+  const [openIndex, setOpenIndex] = useState<number | null>(null);
+
+  const handleLightGallery = (index: number) => setOpenIndex(index);
+  const handleClose = () => setOpenIndex(null);
   return (
     <motion.div
       initial={{
@@ -30,20 +36,30 @@ const Environment = () => {
       }}
       className={styles.wrapper}
     >
-      <div className={styles.slider}>
-        <Swiper
-          className={styles.swiper}
-          spaceBetween={16}
-          modules={[Navigation]}
-          slidesPerView={"auto"}
-        >
-          {images.map((image, i) => (
-            <SwiperSlide className={styles.swiperSlide} key={i}>
-              <Image src={image.imgSrc} alt="" className={styles.image} />
-            </SwiperSlide>
-          ))}
-        </Swiper>
-      </div>
+      <LightGallery
+        images={images}
+        openIndex={openIndex}
+        onClose={handleClose}
+      />
+      <Swiper
+        className={styles.swiper}
+        spaceBetween={16}
+        modules={[Navigation]}
+        slidesPerView={"auto"}
+      >
+        {images.map((image, i) => (
+          <SwiperSlide className={styles.swiperSlide} key={i}>
+            <Image
+              onClick={() => handleLightGallery(i)}
+              src={image.url}
+              alt={image.alt}
+              className={styles.image}
+              width={908}
+              height={490}
+            />
+          </SwiperSlide>
+        ))}
+      </Swiper>
       <div className={styles.textWrapper}>
         <p className={styles.text}>
           ტყე პროექტ :  წავკისის განუყოფელი ნაწილია, რაც განსაკუთრებულ

@@ -13,6 +13,7 @@ import "@/assets/styles/mui.css";
 import "@/assets/styles/styles.css";
 import "@/assets/styles/fonts.css";
 import "@/assets/styles/swiper.css";
+import "@/assets/styles/lightGallery.css";
 import SidebarsMobile from "@/components/SidebarsMobile";
 
 function App({ Component, pageProps, router }: AppProps) {

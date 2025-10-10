@@ -1,23 +1,31 @@
-import React from "react";
+import { useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { motion } from "framer-motion";
 import { Navigation } from "swiper/modules";
 import Image from "next/image";
+import LightGallery from "@/components/LightGallery";
 
 import styles from "./styles.module.css";
 
-import ImageSrc1 from "@/assets/images/about-project-slide.png";
-import ImageSrc2 from "@/assets/images/about-project-slide-2.png";
-
 const images = [
-  { imgSrc: ImageSrc1 },
-  { imgSrc: ImageSrc2 },
-  { imgSrc: ImageSrc1 },
-  { imgSrc: ImageSrc2 },
-  { imgSrc: ImageSrc1 },
+  { url: "/images/about-project-slide.png", alt: "" },
+  { url: "/images/about-project-slide-2.png", alt: "" },
+  { url: "/images/about-project-slide.png", alt: "" },
+  { url: "/images/about-project-slide-2.png", alt: "" },
+  { url: "/images/about-project-slide.png", alt: "" },
+  { url: "/images/about-project-slide.png", alt: "" },
+  { url: "/images/about-project-slide-2.png", alt: "" },
+  { url: "/images/about-project-slide.png", alt: "" },
+  { url: "/images/about-project-slide-2.png", alt: "" },
+  { url: "/images/about-project-slide.png", alt: "" },
 ];
 
 const About = () => {
+  const [openIndex, setOpenIndex] = useState<number | null>(null);
+
+  const handleLightGallery = (index) => setOpenIndex(index);
+  const handleClose = () => setOpenIndex(null);
+
   return (
     <motion.div
       initial={{
@@ -30,6 +38,11 @@ const About = () => {
       className={styles.wrapper}
     >
       <div>
+        <LightGallery
+          images={images}
+          openIndex={openIndex}
+          onClose={handleClose}
+        />
         <Swiper
           className={styles.swiper}
           spaceBetween={16}
@@ -38,7 +51,14 @@ const About = () => {
         >
           {images.map((image, i) => (
             <SwiperSlide className={styles.swiperSlide} key={i}>
-              <Image src={image.imgSrc} alt="" className={styles.image} />
+              <Image
+                onClick={() => handleLightGallery(i)}
+                src={image.url}
+                alt={image.alt}
+                className={styles.image}
+                width={908}
+                height={490}
+              />
             </SwiperSlide>
           ))}
         </Swiper>

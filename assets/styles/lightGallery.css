@@ -1,0 +1,110 @@
+@import "lightgallery/css/lightgallery.css";
+@import "lightgallery/css/lg-thumbnail.css";
+
+.lg-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 9999999 !important;
+}
+
+.lg-backdrop {
+  background-color: #f0f0f0 !important;
+}
+
+.lg-thumb-outer {
+  background-color: #f0f0f0 !important;
+}
+
+.lg-thumb-outer .lg-group {
+  margin-bottom: 10px !important;
+}
+
+.lg-thumb-item img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+  object-position: center !important;
+  /* border: 2px solid transparent !important; */
+  cursor: pointer;
+}
+
+.lg-thumb-item.active {
+  border-color: #000 !important;
+}
+
+.lg-thumb-item:hover {
+  border-color: #000 !important;
+}
+
+.lg-prev {
+  background-image: url("/images/ArrowLeft.svg") !important;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 9999px;
+  background-color: transparent !important;
+  width: 60px !important;
+  height: 60px !important;
+  position: absolute !important;
+  top: 50% !important;
+  transform: translateY(-50%) !important;
+  left: 40px !important;
+}
+
+.lg-next {
+  background-image: url("/images/ArrowRight.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 9999px;
+  background-color: transparent !important;
+  width: 60px !important;
+  height: 60px !important;
+  position: absolute !important;
+  top: 50% !important;
+  transform: translateY(-50%) !important;
+  right: 40px !important;
+}
+
+.lg-prev::after {
+  content: "" !important;
+}
+
+.lg-next::before {
+  content: "" !important;
+}
+
+.lg-image {
+  width: 75% !important;
+  height: auto !important;
+  margin-top: 20px !important;
+}
+
+.lg-close {
+  background-image: url("/images/close.svg") !important;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 40px !important;
+  height: 40px !important;
+  top: 25px !important;
+  right: 40px !important;
+  opacity: 1 !important;
+  background-color: transparent !important;
+  position: absolute !important;
+}
+
+.lg-close::after {
+  content: "" !important;
+}
+
+.lg-counter {
+  display: none !important;
+}
+
+@media (max-width: 1279.98px) {
+  .lg-thumb-item {
+    width: 180px !important;
+    height: 100px !important;
+  }
+}

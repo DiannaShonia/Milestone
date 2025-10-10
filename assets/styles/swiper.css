@@ -2,10 +2,6 @@
 @import "swiper/css/navigation";
 @import "swiper/css/pagination";
 
-.swiper {
-  height: 100% !important;
-}
-
 .custom-prev,
 .custom-next {
   position: absolute !important;
